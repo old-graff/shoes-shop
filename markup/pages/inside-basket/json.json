@@ -1,0 +1,252 @@
+{
+  "page_main": {
+    "head": {
+      "title": "Магазин обуви",
+      "useSocialMetaTags": true
+    },
+    "header": {
+      "title": "",
+      "phone": "22-44-12",
+      "main-menu": "#"
+    },
+    "filter": {
+      "brand": [
+        {
+          "brand": "Angry Birds"
+        },
+        {
+          "brand": "Anta"
+        },
+        {
+          "brand": "Betsy",
+          "selected": "act"
+        },
+        {
+          "brand": "Cars"
+        },
+        {
+          "brand": "Ditop"
+        },
+        {
+          "brand": "Ecotex"
+        },
+        {
+          "brand": "Eksis"
+        },
+        {
+          "brand": "Elegami"
+        },
+        {
+          "brand": "Hello Kitty"
+        },
+        {
+          "brand": "Hot Wheels"
+        },
+        {
+          "brand": "Jungle"
+        },
+        {
+          "brand": "Kakadu"
+        },
+        {
+          "brand": "Kakadu Animal Planet"
+        },
+        {
+          "brand": "Kakadu Летающие звери"
+        },
+        {
+          "brand": "Keddo"
+        },
+        {
+          "brand": "Minnie Mouse"
+        },
+        {
+          "brand": "Monster High"
+        },
+        {
+          "brand": "Mursu"
+        },
+        {
+          "brand": "My Little Pony E"
+        },
+        {
+          "brand": "Girls"
+        },
+        {
+          "brand": "Planes"
+        },
+        {
+          "brand": "S-tep"
+        },
+        {
+          "brand": "Strobbs"
+        },
+        {
+          "brand": "Transformers"
+        },
+        {
+          "brand": "Vitacci"
+        },
+        {
+          "brand": "Wbl"
+        },
+        {
+          "brand": "Winx"
+        },
+        {
+          "brand": "Антилопа"
+        },
+        {
+          "brand": "Зебра"
+        },
+        {
+          "brand": "Котофей"
+        },
+        {
+          "brand": "Лель"
+        },
+        {
+          "brand": "Парижская Коммуна"
+        },
+        {
+          "brand": "Спартак"
+        },
+        {
+          "brand": "Топ-Топ"
+        },
+        {
+          "brand": "Фома"
+        }
+      ],
+      "size": [
+        {
+          "size": "12"
+        },
+        {
+          "size": "13"
+        },
+        {
+          "size": "16"
+        },
+        {
+          "size": "17"
+        },
+        {
+          "size": "18"
+        },
+        {
+          "size": "19"
+        },
+        {
+          "size": "20"
+        },
+        {
+          "size": "21"
+        },
+        {
+          "size": "22"
+        },
+        {
+          "size": "23"
+        },
+        {
+          "size": "24"
+        },
+        {
+          "size": "25"
+        },
+        {
+          "size": "26"
+        },
+        {
+          "size": "27"
+        },
+        {
+          "size": "28"
+        },
+        {
+          "size": "29"
+        },
+        {
+          "size": "30"
+        },
+        {
+          "size": "31"
+        },
+        {
+          "size": "32"
+        },
+        {
+          "size": "33"
+        },
+        {
+          "size": "34"
+        },
+        {
+          "size": "35"
+        },
+        {
+          "size": "36"
+        },
+        {
+          "size": "37"
+        },
+        {
+          "size": "38"
+        },
+        {
+          "size": "39"
+        },
+        {
+          "size": "40"
+        },
+        {
+          "size": "41"
+        },
+        {
+          "size": "42"
+        },
+        {
+          "size": "43"
+        },
+        {
+          "size": "44"
+        },
+        {
+          "size": "45"
+        },
+        {
+          "size": "46"
+        },
+        {
+          "size": "47"
+        },
+        {
+          "size": "50"
+        }
+      ],
+      "season": [
+        {
+          "season": "Весна-Осень"
+        },
+        {
+          "season": "Зима"
+        },
+        {
+          "season": "Лето"
+        }
+      ],
+      "sex": [
+        {
+          "sex": "мальчик"
+        },
+        {
+          "sex": "девочка"
+        },
+        {
+          "sex": "универсальные"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.basket-big {
+  padding-right: 20px;
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  &__table {
+    width: 100%;
+    tr {
+      th {
+        padding: 0 6px 8px 6px;
+      }
+    }
+    tr {
+      td {
+        border-top: 1px solid #CCC;
+        padding: 6px 10px;
+
+      }
+      td:first-child {
+        width: 60px;
+        padding: 0;
+      }
+    }
+    tfoot tr td {
+      border-top: 1px solid #666;
+      height: 50px;
+    }
+  }
+  &__img-cont {
+    width: 60px;
+    height: 60px;
+    img {
+      @include img-max-size(60px, 60px)
+    }
+  }
+  &__number {
+    white-space: nowrap;
+    text-align: center;
+    input {
+      width: 1.7em;
+      margin: 0 2px;
+      border: 1px solid #CCC;
+      text-align: center;
+    }
+    i {
+      font-style: normal;
+      font-size: 2.4rem;
+      position: relative;
+      top: 1px;
+      &:hover {
+        cursor: pointer;
+        color: #005b8d;
+      }
+    }
+  }
+  &__price {
+    text-align: right;
+  }
+  &__size {
+    text-align: center;
+  }
+  &__total {
+    text-align: right;
+    font-size: 1.8rem;
+  }
+  &__total-number {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  &__total-sum {
+    font-size: 1.8rem;
+    text-align: right;
+  }
+  &__ready-to-buy {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 20px;
+    background-color: $color-pink;
+    color: #FFF;
+    text-decoration: none;
+    float: left;
+    font-size: 1.8rem;
+    margin-top: 4px;
+    &:hover {
+      background-color: $color-pink + #111111;
+      color: #FFF;
+    }
+  }
+}
