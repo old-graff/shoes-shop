@@ -1,0 +1,64 @@
+.login {
+  position: relative;
+  height: $header-height;
+  background-color: $color-pink;
+  width: 100%;
+  &__form {
+    position: absolute;
+    display: none;
+    background-color: $color-yellow;
+    padding: 20px;
+    top: $header-height;
+    text-align: center;
+    label {
+      margin-bottom: 6px;
+      display: block;
+      text-align: left;
+    }
+    label > input {
+      border: none;
+      padding: 6px 8px;
+      width: 100%;
+    }
+    label > span {display: none}
+    input[type=submit] {
+      border: none;
+      background-color: $color-pink;
+      padding: 6px 20px;
+      color: #FFF;
+      font-size: 1.6rem;
+      &:hover {
+        background-color: $color-pink + #111111;
+      }
+    }
+  }
+  &__invite {
+    text-align: center;
+  }
+  &__entry, &__registration {
+    color: #FFF;
+    text-decoration: none;
+  }
+  &__entry {
+    padding: 6px 0;
+    font-size: 2.4rem;
+    line-height: 1;
+    height: $header-height;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    &:hover {
+      background-color: $color-pink + #111111;
+      color: #FFF;
+    }
+  }
+  &__registration {
+    font-size: 1.3rem;
+    position: relative;
+    top: -20px;
+    text-decoration: underline;
+    &:hover {
+      color: #FFF;
+    }
+  }
+}

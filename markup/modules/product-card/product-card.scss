@@ -1,0 +1,162 @@
+.product-card {
+  $block-width: 240px;
+  $price-size: 64px;
+
+  width: $block-width + 2px;
+  height: 374px;
+  padding: 14px;
+  background-color: $color-yellow-light;
+  border: 1px solid $color-yellow-light;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  &__img-cont {
+    width: $block-width;
+    height: $block-width;
+    position: relative;
+    left: -14px;
+    top: -14px;
+    img {
+      @include img-max-size($block-width, $block-width)
+    }
+  }
+  &__strong {
+    font-weight: bold;
+  }
+  &__limiter {
+    //overflow: hidden;
+    height: 132px;
+    p {
+      font-size: 1.2rem;
+      color: #888;
+      abbr {
+        font-weight: bold;
+      }
+    }
+  }
+  &__add-to-cart {
+    height: $price-size;
+    width: $price-size;
+    line-height: $price-size;
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0.4s;
+    top: 0;
+    left: 0;
+    i {
+      display: block;
+      position: absolute;
+      //top: 64px;
+      top: 7px;
+      right: 9px;
+      @extend %icon;
+      @include icon_size(48px);
+      @extend %icon_supermarket2;
+    }
+  }
+  &__price {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    color: #FFF;
+    height: $price-size;
+    width: $price-size;
+    line-height: $price-size;
+    background-color: $color-pink;
+    border-radius: 50%;
+    text-align: center;
+    word-spacing: -0.2em;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out 0.4s;
+    span {
+      z-index: 2;
+      position: relative;
+      font-weight: bold;
+      top: -2px;
+      transition: opacity 0.2s ease-in-out 0.4s;
+      opacity: 1;
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        margin-left: -12px;
+        margin-top: 3px;
+        @extend %icon;
+        @include icon_size(24px);
+        @extend %icon_supermarket3;
+      }
+    }
+    &:hover {
+      background-color: $color-pink + #111111;
+      box-shadow: 0 0 10px rgba(241, 141, 138, 0.4);
+      span {
+        //top: -64px;
+        opacity: 0;
+      }
+      a {
+        //top: 7px;
+        opacity: 1;
+      }
+    }
+  }
+  &__title {
+    font-size: 1.2rem;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    -webkit-word-break: break-all;
+    padding-bottom: 6px;
+    height: 34px;
+    overflow: hidden;
+    //border: 1px solid blue;
+    margin-bottom: 6px;
+    a {
+      color: $color-pink;
+      font-weight: bold;
+    }
+  }
+  &__brand {
+    font-size: 1.2rem;
+  }
+  &__sex {
+    font-size: 1.2rem;
+  }
+  &__season {
+    font-size: 1.2rem;
+  }
+  &__size {
+    position: relative;
+    font-size: 1.2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &:hover {
+      white-space: normal;
+      text-overflow: clip;
+      overflow: visible;
+       .product-card__oversize {
+        display: block;
+        position: absolute;
+        width: 100%;
+        //border: 1px solid blue;
+        //width: 10px;
+        //height: 10px;
+        //margin-left: 60px;
+        padding: 6px;
+        border: 1px solid #888;
+        left: -7px;
+        top: -7px;
+        background-color: $color-yellow-light;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}

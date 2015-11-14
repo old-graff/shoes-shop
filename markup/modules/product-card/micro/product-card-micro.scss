@@ -1,0 +1,104 @@
+.product-card-micro {
+  height: 42px;
+  font-size: 1.1rem;
+  background-color: $color-yellow-light;
+  border: 1px solid $color-yellow-light;
+  margin: 6px 6px;
+  position: relative;
+  //overflow: hidden;
+  p {
+    font-size: 1.1rem;
+  }
+  &__img-cont {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 0;
+    top: 0;
+    float: left;
+    img {
+      @include img-max-size(40px, 40px)
+    }
+  }
+  &__wrapper {
+    //border: 1px solid blue;
+    margin-left: 44px;
+    height: 40px;
+  }
+  &__title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    width: 130px;
+    color: $color-pink;
+    margin-bottom: 6px;
+  }
+  &__price {
+    font-size: 1.8rem;
+    color: #333;
+  }
+  &__ico-del {
+    display: block;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    @extend %icon;
+    @include icon_size(8px);
+    @extend %icon_close;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__number {
+    //height: 14px;
+    //line-height: 14px;
+    width: 18px;
+    height: 42px;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    overflow: hidden;
+    display: block;
+    input {
+      position: absolute;
+      top: 13px;
+      right: 0;
+      height: 16px;
+      //padding: 1px 2px;
+      //padding-top: 2px;
+      border: 1px solid #FFF;
+      font-size: 1rem;
+      text-align: center;
+      width: 18px;
+    }
+    i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: $color-pink;
+      color: #FFF;
+      text-align: center;
+      display: block;
+      line-height: 13px;
+      font-size: 1.4rem;
+      height: 13px;
+      width: 18px;
+      font-weight: bold;
+      &:hover {
+        background-color: $color-pink + #111111;
+        cursor: pointer;
+      }
+    }
+    input + i {
+      top: 29px
+    }
+    span {
+      //position: relative;
+      //top: -2px;
+      //margin-left: 2px;
+      display: none;
+    }
+  }
+}

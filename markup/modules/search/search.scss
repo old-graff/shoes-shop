@@ -1,0 +1,45 @@
+.search {
+  padding: 0 20px;
+  height: $header-height;
+  display: table;
+  width: 100%;
+  &__form {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__input-cont {
+    position: relative;
+    padding-right: 30px;
+    &:after {
+      content: '';
+      position: absolute;
+      @extend %icon;
+      @extend %icon_search;
+      @include icon_size(20px);
+      right: 5px;
+      top: 5px;
+    }
+  }
+  input[type=search] {
+    border: none;
+    height: 30px;
+    padding: 2px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -1px;
+  }
+  input[type=submit] {
+    vertical-align: middle;
+    border: none;
+    background-color: $color-blue;
+    height: 30px;
+    width: 30px;
+    margin-top: -1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    &:hover {
+      background-color: $color-blue + #111111;
+    }
+  }
+}

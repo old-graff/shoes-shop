@@ -1,0 +1,73 @@
+<div block="filter">
+    <p elem="title">Фильтры</p>
+
+    <form action="#" method="post">
+        <div elem="value">
+            <p elem="value-title" mod="min-max">
+                <!-- 'mod:min-max' или 'mod:max-min' - зависит от направления сортировки -->
+                <a href="#">Торговая марка</a>
+                <span class="min-max">отсортированно А&ndash;Я, A&ndash;Z</span>
+                <span class="max-min">отсортированно Я&ndash;А, Z&ndash;A</span>
+            </p>
+
+            <p elem="value-cont">
+                {{#each brand}}
+                <label><input type="checkbox"><span>{{brand}}</span></label>
+                {{/each}}
+                <br>
+                <label elem="select-all"><input type="checkbox"><span>Выделить всё</span></label>
+            </p>
+        </div>
+
+        <div elem="value">
+            <p elem="value-title" mod="min-max">
+                <a href="#">Размеры</a>
+                <span class="min-max">отсортированно 12&ndash;50</span>
+                <span class="max-min">отсортированно 50&ndash;12</span>
+            </p>
+
+            <p elem="value-cont">
+                {{#each size}}
+                <label><input type="checkbox"><span>{{size}}</span></label>
+                {{/each}}
+                <br>
+                <label elem="select-all"><input type="checkbox"><span>Выделить всё</span></label>
+            </p>
+        </div>
+
+        <div elem="value">
+            <p elem="value-title" mod="min-max">
+                <a href="#">Сезон</a>
+                <span class="min-max">отсортированно Лето → Весна-Осень → Зима</span>
+                <span class="max-min">отсортированно Зима → Весна-Осень → Лето</span>
+            </p>
+
+            <p elem="value-cont">
+                {{#each season}}
+                <label><input type="checkbox"><span>{{season}}</span></label>
+                {{/each}}
+                <br>
+                <label elem="select-all"><input type="checkbox"><span>Выделить всё</span></label>
+            </p>
+        </div>
+
+        <div elem="value">
+            <p elem="value-title" mod="min-max">
+                <a href="#">Пол</a>
+                <span class="min-max">отсортированно Мальчик → Девочка → Универсальные</span>
+                <span class="max-min">отсортированно Универсальные → Девочка → Мальчик</span>
+            </p>
+
+            <p elem="value-cont">
+                {{#each sex}}
+                <label><input type="checkbox"><span>{{sex}}</span></label>
+                {{/each}}
+                <br>
+                <label elem="select-all"><input type="checkbox"><span>Выделить всё</span></label>
+            </p>
+        </div>
+    </form>
+
+    <p elem="result">Найдено: <span>1092 пары</span></p>
+
+</div><!--filter-->

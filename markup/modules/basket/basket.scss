@@ -1,0 +1,60 @@
+.basket {
+  position: absolute;
+  top: 0;
+  right: 0;
+  //border: 1px solid blue;
+  width: 220px;
+  &__header {
+    //border: 1px solid blue;
+    height: $header-height;
+    background-color: $color-pink;
+    position: relative;
+    z-index: 11;
+  }
+  &__price {
+    line-height: $header-height;
+    height: $header-height;
+    text-align: center;
+    color: #FFF;
+    font-size: 3rem;
+    font-weight: bold;
+    word-spacing: -0.1em;
+    span {
+      margin-left: 52px;
+      position: relative;
+      display: inline-block;
+      &:before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        @extend %icon;
+        @include icon_size(48px);
+        @extend %icon_supermarket3;
+        left: -52px;
+        top: -7px;
+      }
+    }
+  }
+  &__content {
+    //display: none;
+    width: 220px;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    //right: -230px;
+    right: 0;
+    border: 8px solid $color-yellow-light;
+    border-bottom-width: 60px;
+    border-top-width: $header-height + 8px;
+    //border-bottom-width: 5px;
+    z-index: 10;
+    background-color: #FFF;
+    box-shadow: 0 50px 8px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out 0.4s;
+  }
+  &:hover {
+    .basket__content {
+      right: 0;
+    }
+  }
+}
