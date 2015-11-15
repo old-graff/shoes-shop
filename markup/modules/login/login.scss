@@ -10,6 +10,7 @@
     padding: 20px;
     top: $header-height;
     text-align: center;
+    width: 100%;
     label {
       margin-bottom: 6px;
       display: block;
@@ -31,6 +32,12 @@
         background-color: $color-pink + #111111;
       }
     }
+  }
+  &__forgot-pass {
+    font-size: 1.2rem;
+    text-align: left;
+    position: relative;
+    top: -4px;
   }
   &__invite {
     text-align: center;

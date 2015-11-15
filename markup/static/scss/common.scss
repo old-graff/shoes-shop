@@ -231,6 +231,7 @@ $footer-height: 50px;
   padding: 5px;
   color: #666;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  z-index: 10000;
   @include at(lg) {
     content: 'lg >1025px';
   }
@@ -271,7 +272,7 @@ $footer-height: 50px;
 
 $header-height: 50px;
 .page {
-  //  min-width: 840px;
+  min-width: 1000px;
   &__header {
     height: $header-height;
     width: 100%;

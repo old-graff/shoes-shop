@@ -35,6 +35,42 @@
       }
     }
   }
+  &__size-list {
+    line-height: 1;
+    width: 42px;
+    padding: 0 10px;
+    display: block;
+    position: absolute;
+    //border: 1px solid blue;
+    top: $price-size - 7px;
+    left: 50%;
+    margin-left: -21px;
+    text-align: center;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out 0.6s;
+    transition-property: padding, max-height;
+    overflow: hidden;
+    a {
+      border-radius: 50%;
+      display: inline-block;
+      background-color: $color-pink;
+      color: #FFF;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      height: 22px;
+      width: 22px;
+      line-height: 22px;
+      margin-top: 4px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      &:hover {
+        color: #FFF;
+        background-color: $color-pink + #111111;
+        box-shadow: 0 0 10px rgba(241, 141, 138, 0.4);
+      }
+    }
+  }
   &__add-to-cart {
     height: $price-size;
     width: $price-size;
@@ -64,22 +100,24 @@
     color: #FFF;
     height: $price-size;
     width: $price-size;
-    line-height: $price-size;
+    //line-height: $price-size;
     background-color: $color-pink;
     border-radius: 50%;
     text-align: center;
     word-spacing: -0.2em;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    //overflow: hidden;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out 0.4s;
-    span {
+    transition-property: box-shadow, background-color;
+    span:first-child {
       z-index: 2;
       position: relative;
       font-weight: bold;
       top: -2px;
       transition: opacity 0.2s ease-in-out 0.4s;
       opacity: 1;
+      line-height: $price-size;
       &:after {
         content: '';
         position: absolute;
@@ -96,13 +134,17 @@
     &:hover {
       background-color: $color-pink + #111111;
       box-shadow: 0 0 10px rgba(241, 141, 138, 0.4);
-      span {
+      span:first-child {
         //top: -64px;
         opacity: 0;
       }
       a {
         //top: 7px;
         opacity: 1;
+      }
+      a + span {
+        max-height: 400px;
+        padding: 8px;
       }
     }
   }

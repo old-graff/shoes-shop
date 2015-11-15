@@ -3,6 +3,8 @@
   position: relative;
   height: $header-height;
   z-index: 11;
+  padding-left: 200px;
+  padding-right: 220px;
   &__logo {
     background-color: $color-pink;
     height: $header-height;
@@ -24,17 +26,17 @@
   &__search-cont {
     float: left;
     height: $header-height;
-    width: 50%;
-    padding-left: 200px;
-    min-width: 340px;
+    width: 40%;
+    //min-width: 260px;
+    //border-right: 1px solid red;
   }
   &__contact-info {
     float: left;
     height: $header-height;
     text-align: center;
     padding: 5px 10px;
-    width: 50%;
-    padding-right: 200px;
+    width: 40%;
+    //border-right:1px solid red;
   }
   &__phone {
     font-size: 2.4rem;
@@ -44,11 +46,26 @@
   &__email {
     font-size: 1.3rem;
   }
+  &__user-name {
+    width: 20%;
+    border-left: 1px solid #CCC;
+    float: left;
+    text-align: center;
+    height: $header-height - 4px;
+    line-height: $header-height - 4px;
+    font-size: 2rem;
+    margin-top: 2px;
+    @include at(lg) {
+      position: fixed;
+      right: 220px;
+      width: 12%;
+    }
+  }
   &__user-ui {
     position: fixed;
     right: 0;
     top: 0;
-    width: 200px;
+    width: 220px;
     height: $header-height;
   }
 }

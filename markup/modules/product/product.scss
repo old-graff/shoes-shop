@@ -1,0 +1,101 @@
+.product {
+  padding-right: 10px;
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  &__img-cont {
+    width: 500px;
+    height: 500px;
+    float: left;
+    img {
+      @include img-max-size(500px, 500px)
+    }
+  }
+  &__description {
+    margin-left: 500px;
+    background-color: $color-yellow-light;
+    padding: 14px;
+    display: block;
+  }
+  &__desc-table {
+    font-size: 1.3rem;
+    tr:first-child td {
+      border-top: none;
+    }
+    td {
+      padding: 6px 0 6px 6px;
+      border-top: 1px solid #DDD;
+    }
+    td:first-child {
+      vertical-align: top;
+      font-weight: bold;
+      color: #333;
+      padding: 6px;
+    }
+  }
+  &__price {
+    font-size: 2rem;
+    td {
+      font-weight: normal !important;
+    }
+  }
+  &__size-table {
+    text-align: center;
+    caption {
+      text-align: left;
+      padding: 6px 0 6px;
+      font-weight: bold;
+    }
+    td {
+      padding: 5px;
+      border-left: 1px solid #CCC;
+    }
+    td:first-child {
+      border-left: none;
+      padding-left: 0;
+      text-align: left;
+    }
+  }
+  &__number {
+    white-space: nowrap;
+    text-align: center;
+    input {
+      width: 1.7em;
+      margin: 0 2px;
+      border: 1px solid #CCC;
+      text-align: center;
+    }
+    i {
+      font-style: normal;
+      font-size: 2.4rem;
+      position: relative;
+      top: 1px;
+      &:hover {
+        cursor: pointer;
+        color: #005b8d;
+      }
+    }
+  }
+  &__form {
+    display: block;
+    clear: left;
+  }
+  &__submit {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 20px;
+    background-color: $color-pink;
+    border: none;
+    color: #FFF;
+    text-decoration: none;
+    float: left;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    &:hover {
+      background-color: $color-pink + #111111;
+      color: #FFF;
+    }
+  }
+}
