@@ -1,14 +1,18 @@
 
-<div block="product-card-micro">
+<div block="product-card-micro" ng-repeat="product in products">
     <div elem="img-cont">
         <img src="%=staticPrefix=%img/content/test-img/boots.jpg" alt="">
     </div>
     <div elem="wrapper">
-        <a href="#" elem="title">Ботинки Transformers повседневные кеды для мальчика</a>
+        <a href="#" elem="title" ng-bind="product.name"></a>
         <p>
-            <span elem="number"><i>
-                &#8249;</i><input type="text" size="2" maxlength="2" value="99"><i>&#8250;</i><span>пар</span></span>
-            <span elem="price">1&nbsp;840&nbsp;₽</span>
+            <span elem="number">
+              <i ng-click="product.count=product.count - 1">&#8249;</i>
+              <input type="text" size="2" maxlength="2" value="{&#123;product.count}}">
+              <i ng-click="product.count=product.count + 1">&#8250;</i>
+              <span>пар</span>
+            </span>
+            <span elem="price" ng-bind="product.price + '₽'"></span>
         </p>
     </div>
     <a href="#" elem="ico-del"><i></i></a>

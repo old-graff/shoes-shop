@@ -5,12 +5,6 @@ app.controller('FilterController', function ($scope) {
         sizes: [],
         seasons: []
     };
-    $scope.brands = [
-        { id: 1, text: 'guest' },
-        { id: 2, text: 'user' },
-        { id: 3, text: 'customer' },
-        { id: 4, text: 'admin' }
-    ];
     $scope.sizes = [
         { id: 1, text: '20' },
         { id: 2, text: '22' },
@@ -38,7 +32,7 @@ app.controller('FilterController', function ($scope) {
             type: 'GET',
             data: $scope.filterForm,
             success: function (response) {
-                $('.content__main-column').html($(response));
+                $('.content__main-column').html($(response).find('.content__main-column').html());
             }
         });
     };

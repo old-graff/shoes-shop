@@ -10,7 +10,7 @@
                 <span class="max-min">отсортированно Я&ndash;А, Z&ndash;A</span>
             </p>
 
-            <p elem="value-cont">
+            <p elem="value-cont" ng-init="brands=[{id:1, text:'brand1'},{id:2, text:'brand2'},{id:3, text:'brand3'},{id:4, text:'brand4'}]">
                 <label ng-repeat="brand in brands">
                     <input type="checkbox" checklist-model="filterForm.brands" checklist-value="brand.id"><span ng-bind="brand.text"></span>
                 </label>
@@ -26,7 +26,7 @@
                 <span class="max-min">отсортированно 50&ndash;12</span>
             </p>
 
-            <p elem="value-cont">
+            <p elem="value-cont" ng-init="sizes=[{id:1, text:'size1'},{id:2, text:'size2'},{id:3, text:'size3'},{id:4, text:'size4'}]">
 
                 <label ng-repeat="size in sizes">
                     <input type="checkbox" checklist-model="filterForm.sizes" checklist-value="size.id"><span ng-bind="size.text"></span>
@@ -43,7 +43,7 @@
                 <span class="max-min">отсортированно Зима → Весна-Осень → Лето</span>
             </p>
 
-            <p elem="value-cont">
+            <p elem="value-cont" ng-init="seasons=[{id:1, text:'Лето'},{id:2, text:'Зима'},{id:3, text:'Весна-Осень'}]">
                 <label ng-repeat="season in seasons">
                     <input type="checkbox" checklist-model="filterForm.seasons" checklist-value="season.id"><span ng-bind="season.text"></span>
                 </label>
@@ -59,12 +59,12 @@
                 <span class="max-min">отсортированно Универсальные → Девочка → Мальчик</span>
             </p>
 
-            <p elem="value-cont">
-                {{#each sex}}
-                <label><input type="checkbox"><span>{{sex}}</span></label>
-                {{/each}}
-                <br>
-                <label elem="select-all"><input type="checkbox"><span>Выделить всё</span></label>
+            <p elem="value-cont" ng-init="genders=[{id:1, text:'Мальчик'},{id:2, text:'Девчка'},{id:3, text:'Унисекс'}]">
+              <label ng-repeat="gender in genders">
+                  <input type="checkbox" checklist-model="filterForm.genders" checklist-value="gender.id"><span ng-bind="gender.text"></span>
+              </label>
+              <br>
+              <label elem="select-all"><input type="checkbox" ng-change="checkAll('genders')" ng-model="all.genders"><span>Выделить всё</span></label>
             </p>
         </div>
 

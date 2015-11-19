@@ -58,3 +58,48 @@ $('a.scrollto[href^=#]').each(function () {
     });
 });
 var app = angular.module('shoesPrj', ['checklist-model']);
+// app.service('BasketService', function(){
+//   products: false;
+//   getProducts: function(){
+//     if (!this.products){
+//       this.products = this.requestProducts();
+//     }
+//     return this.products;
+//   };
+//   addProduct: function (product){
+//     this.products.push(product);
+//   };
+//   deleteProduct: function (productID){
+//     for (var i = 0; i < this.products.length; i++) {
+//       if (this.products[i]['id'] == productID) {
+//         delete this.products[i];
+//         break;
+//       }
+//     }
+//   };
+//   requestProducts: function (){
+//     return [
+//       {
+//         productID: 1,
+//         sizeID: 1,
+//         count: 2,
+//         name: 'product 1',
+//         price: 321
+//       },
+//       {
+//         productID: 2,
+//         sizeID: 1,
+//         count: 2,
+//         name: 'product 2',
+//         price: 321
+//       },
+//       {
+//         productID: 3,
+//         sizeID: 2,
+//         count: 12,
+//         name: 'product 3',
+//         price: 321
+//       },
+//     ];
+//   }
+// });
