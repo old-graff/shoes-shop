@@ -40,7 +40,6 @@ function sendForm(form_DOM, successHandler, errorHandler) {
         cache: false
     });
 }
-
 function yandexGoal_showPhone(masterID) {
     yaCounter21591305.reachGoal("show_number", {
         "master": masterID
@@ -58,3 +57,4 @@ $('a.scrollto[href^=#]').each(function () {
         return false;
     });
 });
+var app = angular.module('shoesPrj', ['checklist-model']);
