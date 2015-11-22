@@ -1,0 +1,160 @@
+.start {
+  width: 800px;
+  margin: 0 auto;
+  &__title {
+    font-family: 'Book Antiqua', Palatino, FreeSerif, Georgia, serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 2.8rem;
+    color: #FFF;
+    padding: 20px;
+    background-color: $color-pink;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  }
+  &__img-cont {
+    width: 390px;
+    position: relative;
+    float: left;
+    margin-bottom: 20px;
+    img {
+      @include img-max-size(390px, auto)
+    }
+  }
+  &__search {
+    clear: left;
+    padding-top: 10px;
+    background-color: $color-yellow-light;
+    margin-bottom: 20px;
+    > p {
+      margin-left: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  }
+  &__hello-text-cont {
+    background-color: $color-yellow-light;
+    padding: 20px;
+    margin-left: 410px;
+  }
+  &__start-button {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 24px;
+    background-color: $color-pink;
+    color: #FFF;
+    text-decoration: none;
+    float: left;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-left: 20px;
+    &:hover {
+      background-color: $color-pink + #111111;
+      color: #FFF;
+    }
+  }
+  &__work-steps {
+    li {
+      background-color: $color-pink;
+      padding: 18px;
+      float: left;
+      margin-left: 40px;
+      width: 240px;
+      height: 200px;
+      text-align: center;
+      font-weight: bold;
+      color: #FFF;
+      margin-bottom: 20px;
+      position: relative;
+      &:before {
+        color: #333;
+        content: '→';
+        font-size: 2rem;
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        margin-top: -10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        display: inline-block;
+        text-align: center;
+      }
+      &:first-child {
+        margin-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+  &__two-block {
+    width: 390px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    float: left;
+    background-color: $color-yellow-light;
+    padding: 20px;
+  }
+  &__two-block-title {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  &__info {
+    li {
+      font-size: 1.3rem;
+      margin-bottom: 6px;
+    }
+  }
+  &__info2 {
+    clear: left;
+    background-color: $color-yellow-light;
+    padding: 20px;
+    li {
+      font-size: 1.3rem;
+      margin-bottom: 4px;
+    }
+  }
+  &__clear {
+    clear: left;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    border: 1px solid blue;
+  }
+  &__contacts {
+    position: fixed;
+    top: 0;
+    right: 5%;
+    color: #FFF;
+    padding: 10px 16px;
+    background-color: $color-pink;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    z-index: 10;
+    p {
+      font-size: 2rem;
+    }
+    @include to(lg) {
+      right: 0;
+    }
+  }
+  .icon {
+    fill: #FFFFFF;
+    display: inline-block;
+    width: 70%;
+  }
+  .delivery-truck {
+    margin-top: -6px;
+  }
+  .message {
+    margin-top: 6px;
+    width: 50%;
+  }
+  .cart {
+    width: 80%;
+    margin-top: -32px;
+  }
+}
