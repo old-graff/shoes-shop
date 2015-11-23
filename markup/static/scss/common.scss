@@ -58,7 +58,16 @@ p {
   font-size: 1.6rem;
   line-height: 1.4em
 }
-
+.rub {
+  font-family: 'rouble';
+  font-weight: normal;
+}
+.rouble {
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  transform: translateX(0);
+}
 /*----Установка шрифта-конец----*/
 
 /*---------Начальная установка ссылок----------*/
