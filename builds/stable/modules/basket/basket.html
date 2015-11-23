@@ -1,0 +1,16 @@
+<div class="basket" ng-controller="BasketController">
+    <div class="basket__header">
+        <p class="basket__price"><span ng-bind="totalPrice() + '₽'"></span></p>
+        <p class="basket__count"></p>
+    </div><!--basket__header-->
+
+    <div class="basket__wrapper">
+        <div class="basket__content">
+
+            {{> product-card/micro/product-card-micro}}
+
+        </div><!--basket__content-->
+        <p class="basket__checkout"><a href="#">Оформить заказ</a></p>
+    </div><!--wrapper__content-->
+
+</div><!--basket-->

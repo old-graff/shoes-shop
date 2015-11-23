@@ -12,29 +12,29 @@
     {{> head/head head}}
 </head>
 
-<body block="page" ng-app="shoesPrj">
+<body class="page" ng-app="shoesPrj">
 
-<section elem="wrapper">
+<section class="page__wrapper">
 
-    <div elem="header">
+    <div class="page__header">
         {{> header/header header}}
     </div><!--page__header-->
 
-    <div elem="content">
+    <div class="page__content">
 
-        <div block="content" mix="block:container">
+        <div class="content content_one-column container">
 
-            <div elem="left-column">
+            <div class="content__left-column">
 
-                {{> filter/filter content}}
+                {{> delivery-address/delivery-address delivery-address}}
 
             </div><!--content__left-column-->
 
-            <div elem="main-column">
-              {{#each content.goods}}
-                {{> product-card/product-card this}}
-              {{/each}}
-                <br elem="clear">
+            <div class="content__main-column">
+
+                {{> basket-big/basket-big basket-big}}
+
+                <br class="content__clear">
 
             </div><!--content__main-column-->
 
@@ -46,7 +46,7 @@
 
 </section><!--page__wrapper-->
 
-<div elem="footer">
+<div class="page__footer">
     {{> footer/footer footer}}
 </div><!--page__footer-->
 

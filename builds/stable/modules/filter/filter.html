@@ -1,0 +1,77 @@
+<div class="filter" ng-controller="FilterController">
+    <p class="filter__title">Фильтры</p>
+
+    <form action="#" method="post">
+        <div class="filter__value">
+            <p class="filter__value-title filter__value-title_min-max">
+                <!-- 'mod:min-max' или 'mod:max-min' - зависит от направления сортировки -->
+                <a href="#">Торговая марка</a>
+                <span class="min-max">отсортированно А&ndash;Я, A&ndash;Z</span>
+                <span class="max-min">отсортированно Я&ndash;А, Z&ndash;A</span>
+            </p>
+
+            <p class="filter__value-cont" ng-init="brands=[{id:1, text:'brand1'},{id:2, text:'brand2'},{id:3, text:'brand3'},{id:4, text:'brand4'}]">
+                <label ng-repeat="brand in brands">
+                    <input type="checkbox" checklist-model="filterForm.brands" checklist-value="brand.id"><span ng-bind="brand.text"></span>
+                </label>
+                <br>
+                <label class="filter__select-all"><input type="checkbox" ng-change="checkAll('brands')" ng-model="all.brands"><span>Выделить всё</span></label>
+            </p>
+        </div>
+
+        <div class="filter__value">
+            <p class="filter__value-title filter__value-title_min-max">
+                <a href="#">Размеры</a>
+                <span class="min-max">отсортированно 12&ndash;50</span>
+                <span class="max-min">отсортированно 50&ndash;12</span>
+            </p>
+
+            <p class="filter__value-cont" ng-init="sizes=[{id:1, text:'size1'},{id:2, text:'size2'},{id:3, text:'size3'},{id:4, text:'size4'}]">
+
+                <label ng-repeat="size in sizes">
+                    <input type="checkbox" checklist-model="filterForm.sizes" checklist-value="size.id"><span ng-bind="size.text"></span>
+                </label>
+                <br>
+                <label class="filter__select-all"><input type="checkbox" ng-change="checkAll('sizes')" ng-model="all.sizes"><span>Выделить всё</span></label>
+            </p>
+        </div>
+
+        <div class="filter__value">
+            <p class="filter__value-title filter__value-title_min-max">
+                <a href="#">Сезон</a>
+                <span class="min-max">отсортированно Лето → Весна-Осень → Зима</span>
+                <span class="max-min">отсортированно Зима → Весна-Осень → Лето</span>
+            </p>
+
+            <p class="filter__value-cont" ng-init="seasons=[{id:1, text:'Лето'},{id:2, text:'Зима'},{id:3, text:'Весна-Осень'}]">
+                <label ng-repeat="season in seasons">
+                    <input type="checkbox" checklist-model="filterForm.seasons" checklist-value="season.id"><span ng-bind="season.text"></span>
+                </label>
+                <br>
+                <label class="filter__select-all"><input type="checkbox" ng-change="checkAll('seasons')" ng-model="all.seasons"><span>Выделить всё</span></label>
+            </p>
+        </div>
+
+        <div class="filter__value">
+            <p class="filter__value-title filter__value-title_min-max">
+                <a href="#">Пол</a>
+                <span class="min-max">отсортированно Мальчик → Девочка → Универсальные</span>
+                <span class="max-min">отсортированно Универсальные → Девочка → Мальчик</span>
+            </p>
+
+            <p class="filter__value-cont" ng-init="genders=[{id:1, text:'Мальчик'},{id:2, text:'Девчка'},{id:3, text:'Унисекс'}]">
+              <label ng-repeat="gender in genders">
+                  <input type="checkbox" checklist-model="filterForm.genders" checklist-value="gender.id"><span ng-bind="gender.text"></span>
+              </label>
+              <br>
+              <label class="filter__select-all"><input type="checkbox" ng-change="checkAll('genders')" ng-model="all.genders"><span>Выделить всё</span></label>
+            </p>
+        </div>
+
+    </form>
+
+    <input type="submit" ng-click="sendForm()">
+
+    <p class="filter__result">Найдено: <span>1092 пары</span></p>
+
+</div><!--filter-->
