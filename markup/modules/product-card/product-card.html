@@ -5,16 +5,17 @@
   </div>
 
   <p elem="price">
-    <span>{{price}}
+    <span>
+      {{price}}
       <b class="rub">c</b>
     </span>
     <!-- ₽ -->
-    <a elem="add-to-cart" href="#" title="Добавить в корзину">
+    <a elem="add-to-cart" href="" title="Добавить в корзину">
       <i></i>
     </a>
     <span elem="size-list">
       {{#each sizes}}
-        <a href="#">{{name}}</a><br>
+        <a href="#" data-good-id="{{../id}}" data-size-id="{{id}}">{{name}}</a><br>
       {{/each}}
     </span>
   </p>

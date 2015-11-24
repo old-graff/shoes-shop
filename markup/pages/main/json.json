@@ -9,7 +9,7 @@
       "title": "Логотип1",
       "phone": "(8482) 20-20-20",
       "email": "lindal@mail.ru",
-      "isGuest": true,
+      "isGuest": false,
       "lk": {
         "username": "lindal",
         "url": "#"
@@ -20,17 +20,37 @@
         "changeUrl": "#",
         "totalPrice": "12312",
         "goods": [{
+          "id": "1",
           "goodID": "1",
           "sizeID": "1",
           "count": "2",
-          "price": "42",
-          "name": "Name2"
+          "price": "624",
+          "good": {
+            "id": "1",
+            "name": "Name",
+            "img": "url",
+            "url": "#",
+            "description": "description",
+            "price": "312",
+            "seasonName": "Лето",
+            "genderName": "Мальчик"
+          }
         }, {
+          "id": "2",
           "goodID": "1",
           "goodSizeID": "2",
           "count": "2",
-          "price": "42",
-          "name": "Name2"
+          "price": "624",
+          "good": {
+            "id": "1",
+            "name": "Name",
+            "img": "url",
+            "url": "#",
+            "description": "description",
+            "price": "312",
+            "seasonName": "Лето",
+            "genderName": "Мальчик"
+          }
         }]
       }
     },
