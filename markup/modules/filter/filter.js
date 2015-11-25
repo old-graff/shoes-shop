@@ -1,39 +1,36 @@
-app.controller('FilterController', function ($scope) {
-    $scope.url = '/main/test.html';
-    $scope.filterForm = {
-        brands: [],
-        sizes: [],
-        seasons: []
-    };
-    $scope.sizes = [
-        { id: 1, text: '20' },
-        { id: 2, text: '22' },
-        { id: 3, text: '24' },
-        { id: 4, text: '26' }
-    ];
-    $scope.seasons = [
-        { id: 1, text: 'Весна-Осень' },
-        { id: 2, text: 'Зима' },
-        { id: 3, text: 'Лето' }
-    ];
-    $scope.all = {};
-    $scope.checkAll = function (field) {
-        if ($scope.all[field]) {
-            $scope.filterForm[field] = $scope[field].map(function (item) {
-                return item.id;
-            });
-        } else {
-            $scope.filterForm[field] = [];
-        }
-    };
-    $scope.sendForm = function () {
-        $.ajax({
-            url:  $scope.url,
-            type: 'GET',
-            data: $scope.filterForm,
-            success: function (response) {
-                $('.content__main-column').html($(response).find('.content__main-column').html());
-            }
-        });
-    };
+$('.filter input[type=checkbox][name]').change(function () {
+    var parent = $(this).closest('p');
+    var checkedInputsCount = parent.find('input[type=checkbox][name]:checked').length;
+    var inputsCount = parent.find('input[type=checkbox][name]').length;
+    if (checkedInputsCount == inputsCount) {
+        parent.find('.filter__select-all input').prop('checked', true);
+    } else {
+        parent.find('.filter__select-all input').prop('checked', false);
+    }
+    sendFilterForm();
 });
+
+$('.filter__select-all input').change(function () {
+    if ($(this).is(':checked')) {
+        $(this).closest('p').find('input[type=checkbox][name]').prop('checked', true);
+    } else {
+        $(this).closest('p').find('input[type=checkbox][name]').prop('checked', false);
+    }
+    sendFilterForm();
+});
+
+function sendFilterForm() {
+    var form = $('.filter form');
+    $.ajax({
+        url: form.attr('action'),
+        data: form.serialize(),
+        type: form.attr('method'),
+        success: function (data) {
+            $('.content__main-column').html($(data).find('.content__main-column').html());
+            $('.filter__result').html($(data).find('.filter__result').html());
+        },
+        error: function (err, status) {
+            console.log('error');
+        }
+    });
+}

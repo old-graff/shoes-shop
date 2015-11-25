@@ -1,24 +1,29 @@
 <div block="header">
 
-    <div elem="logo">
-        <p>Логотип</p>
-    </div>
-    <div elem="search-cont">
-        {{> search/search search}}
-    </div>
+  <div elem="logo">
+    <p>{{title}}</p>
+  </div>
+  <div elem="search-cont">
+    {{> search/search search}}
+  </div>
 
-    <div elem="contact-info">
-        <p elem="phone">(8482)&nbsp;20-20-20</p>
-        <a elem="email" href="mailto:testmail@testmail.ru">testmail@testmail.ru</a>
-    </div>
-
+  <div elem="contact-info">
+    <p elem="phone">{{phone}}</p>
+    <a elem="email" href="mailto:{{email}}">{{email}}</a>
+  </div>
+  {{#unless isGuest}}
     <div elem="user-name">
-        <a href="#">Иван М.</a>
+      <a href="#">Иван М.</a>
     </div>
+  {{/unless}}
 
-    <div elem="user-ui">
-        {{> login/login login}}
-        {{> basket/basket basket}}
-    </div>
+  <div elem="user-ui">
+    {{#if isGuest}}
+      {{> login/login loginForm}}
+      {{else}}
+      {{> basket/basket basket}}
+    {{/if}}
+  </div>
 
-</div><!--header-->
+</div>
+<!--header-->

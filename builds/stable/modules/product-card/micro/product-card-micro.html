@@ -1,0 +1,19 @@
+
+<div class="product-card-micro" ng-repeat="product in products">
+    <div class="product-card-micro__img-cont">
+        <img src="/tmpl/builds/stable/static/img/content/test-img/boots.jpg" alt="">
+    </div>
+    <div class="product-card-micro__wrapper">
+        <a class="product-card-micro__title" href="#" ng-bind="product.name"></a>
+        <p>
+            <span class="product-card-micro__number">
+              <i ng-click="product.count=product.count - 1">&#8249;</i>
+              <input type="text" size="2" maxlength="2" value="{&#123;product.count}}">
+              <i ng-click="product.count=product.count + 1">&#8250;</i>
+              <span>пар</span>
+            </span>
+            <span class="product-card-micro__price" ng-bind="product.price + '₽'"></span>
+        </p>
+    </div>
+    <a class="product-card-micro__ico-del" href="#"><i></i></a>
+</div><!--product-card-micro-->

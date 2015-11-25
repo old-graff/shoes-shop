@@ -26,16 +26,14 @@
 
             <div elem="left-column">
 
-                {{> filter/filter filter}}
+                {{> filter/filter content}}
 
             </div><!--content__left-column-->
 
             <div elem="main-column">
-
-                {{#repeat 7}}
-                {{> product-card/product-card}}
-                {{/repeat}}
-
+              {{#each content.goods}}
+                {{> product-card/product-card this}}
+              {{/each}}
                 <br elem="clear">
 
             </div><!--content__main-column-->

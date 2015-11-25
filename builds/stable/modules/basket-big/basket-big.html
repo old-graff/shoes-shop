@@ -1,0 +1,49 @@
+<div class="basket-big">
+
+    <p class="basket-big__title">Ваши товары</p>
+
+    <table class="basket-big__table">
+        <thead>
+        <tr>
+            <th>Фото</th>
+            <th>Название</th>
+            <th>Марка</th>
+            <th>Размер</th>
+            <th>Кол-во</th>
+            <th>Цена</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#repeat 7}}
+        <tr>
+            <td>
+                <a class="basket-big__del-ico" href="#"><i></i></a>
+                <div class="basket-big__img-cont">
+                    <img src="/tmpl/builds/stable/static/img/content/test-img/boots.jpg" alt="">
+                </div>
+            </td>
+            <td>Ботинки Transformers повседневные кеды для мальчика 9999A</td>
+            <td>Kakadu Летающие звери</td>
+            <td class="basket-big__size">32</td>
+            <td>
+                <p class="basket-big__number">
+                    <i>&#8249;</i><input type="text" size="2" maxlength="2" value="99"><i>&#8250;</i>
+                </p>
+            </td>
+            <td class="basket-big__price"><span>2400₽</span></td>
+        </tr>
+        {{/repeat}}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><a class="basket-big__ready-to-buy" href="#">Оформить сделку</a></td>
+                <td class="basket-big__total">Итого:</td>
+                <td class="basket-big__total-number">199</td>
+                <td class="basket-big__total-sum">32&nbsp;845&nbsp;₽</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+</div><!--basket-big-->

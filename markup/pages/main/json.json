@@ -1,252 +1,141 @@
 {
   "page_main": {
     "head": {
-      "title": "Магазин обуви",
-      "useSocialMetaTags": true
+      "title": "title",
+      "description": "description",
+      "keywords": "keywords"
     },
     "header": {
-      "title": "",
-      "phone": "22-44-12",
-      "main-menu": "#"
+      "title": "Логотип1",
+      "phone": "(8482) 20-20-20",
+      "email": "lindal@mail.ru",
+      "isGuest": false,
+      "lk": {
+        "username": "lindal",
+        "url": "#"
+      },
+      "basket": {
+        "addUrl": "#",
+        "deleteUrl": "#",
+        "changeUrl": "#",
+        "totalPrice": "12312",
+        "goods": [{
+          "id": "1",
+          "goodID": "1",
+          "sizeID": "1",
+          "count": "2",
+          "price": "624",
+          "good": {
+            "id": "1",
+            "name": "Name",
+            "img": "url",
+            "url": "#",
+            "description": "description",
+            "price": "312",
+            "seasonName": "Лето",
+            "genderName": "Мальчик"
+          }
+        }, {
+          "id": "2",
+          "goodID": "1",
+          "goodSizeID": "2",
+          "count": "2",
+          "price": "624",
+          "good": {
+            "id": "1",
+            "name": "Name",
+            "img": "url",
+            "url": "#",
+            "description": "description",
+            "price": "312",
+            "seasonName": "Лето",
+            "genderName": "Мальчик"
+          }
+        }]
+      }
     },
-    "filter": {
-      "brand": [
-        {
-          "brand": "Angry Birds"
-        },
-        {
-          "brand": "Anta"
-        },
-        {
-          "brand": "Betsy",
-          "selected": "act"
-        },
-        {
-          "brand": "Cars"
-        },
-        {
-          "brand": "Ditop"
-        },
-        {
-          "brand": "Ecotex"
-        },
-        {
-          "brand": "Eksis"
-        },
-        {
-          "brand": "Elegami"
-        },
-        {
-          "brand": "Hello Kitty"
-        },
-        {
-          "brand": "Hot Wheels"
-        },
-        {
-          "brand": "Jungle"
-        },
-        {
-          "brand": "Kakadu"
-        },
-        {
-          "brand": "Kakadu Animal Planet"
-        },
-        {
-          "brand": "Kakadu Летающие звери"
-        },
-        {
-          "brand": "Keddo"
-        },
-        {
-          "brand": "Minnie Mouse"
-        },
-        {
-          "brand": "Monster High"
-        },
-        {
-          "brand": "Mursu"
-        },
-        {
-          "brand": "My Little Pony E"
-        },
-        {
-          "brand": "Girls"
-        },
-        {
-          "brand": "Planes"
-        },
-        {
-          "brand": "S-tep"
-        },
-        {
-          "brand": "Strobbs"
-        },
-        {
-          "brand": "Transformers"
-        },
-        {
-          "brand": "Vitacci"
-        },
-        {
-          "brand": "Wbl"
-        },
-        {
-          "brand": "Winx"
-        },
-        {
-          "brand": "Антилопа"
-        },
-        {
-          "brand": "Зебра"
-        },
-        {
-          "brand": "Котофей"
-        },
-        {
-          "brand": "Лель"
-        },
-        {
-          "brand": "Парижская Коммуна"
-        },
-        {
-          "brand": "Спартак"
-        },
-        {
-          "brand": "Топ-Топ"
-        },
-        {
-          "brand": "Фома"
+    "content": {
+      "goodsCount": "132",
+      "filterForm": {
+        "action": "/",
+        "fields": {
+          "brands": [{
+            "value": "1",
+            "name": "brand[]",
+            "label": "Brand1",
+            "checked": true
+          }, {
+            "value": "2",
+            "name": "brand[]",
+            "label": "Brand2",
+            "checked": false
+          }],
+          "sizes": [{
+            "value": "1",
+            "name": "size[]",
+            "label": "Size1",
+            "checked": true
+          }, {
+            "value": "2",
+            "name": "size[]",
+            "label": "Size2",
+            "checked": false
+          }],
+          "seasons": [{
+            "value": "1",
+            "name": "seasons[]",
+            "label": "Лето",
+            "checked": true
+          }, {
+            "value": "2",
+            "name": "seasons[]",
+            "label": "Зима",
+            "checked": false
+          }, {
+            "value": "3",
+            "name": "seasons[]",
+            "label": "Весна-Осень",
+            "checked": false
+          }],
+          "genders": [{
+            "value": "1",
+            "label": "Мальчик",
+            "name": "genders[]",
+            "checked": true
+          }, {
+            "value": "2",
+            "label": "Девочка",
+            "name": "genders[]",
+            "checked": false
+          }, {
+            "value": "3",
+            "label": "Унисекс",
+            "name": "genders[]",
+            "checked": false
+          }]
         }
-      ],
-      "size": [
-        {
-          "size": "12"
+      },
+      "goods": [{
+        "id": "1",
+        "name": "Name",
+        "img": "url",
+        "url": "#",
+        "description": "description",
+        "price": "3213",
+        "brand": {
+          "id": "1",
+          "name": "brand1"
         },
-        {
-          "size": "13"
-        },
-        {
-          "size": "16"
-        },
-        {
-          "size": "17"
-        },
-        {
-          "size": "18"
-        },
-        {
-          "size": "19"
-        },
-        {
-          "size": "20"
-        },
-        {
-          "size": "21"
-        },
-        {
-          "size": "22"
-        },
-        {
-          "size": "23"
-        },
-        {
-          "size": "24"
-        },
-        {
-          "size": "25"
-        },
-        {
-          "size": "26"
-        },
-        {
-          "size": "27"
-        },
-        {
-          "size": "28"
-        },
-        {
-          "size": "29"
-        },
-        {
-          "size": "30"
-        },
-        {
-          "size": "31"
-        },
-        {
-          "size": "32"
-        },
-        {
-          "size": "33"
-        },
-        {
-          "size": "34"
-        },
-        {
-          "size": "35"
-        },
-        {
-          "size": "36"
-        },
-        {
-          "size": "37"
-        },
-        {
-          "size": "38"
-        },
-        {
-          "size": "39"
-        },
-        {
-          "size": "40"
-        },
-        {
-          "size": "41"
-        },
-        {
-          "size": "42"
-        },
-        {
-          "size": "43"
-        },
-        {
-          "size": "44"
-        },
-        {
-          "size": "45"
-        },
-        {
-          "size": "46"
-        },
-        {
-          "size": "47"
-        },
-        {
-          "size": "50"
-        }
-      ],
-      "season": [
-        {
-          "season": "Весна-Осень"
-        },
-        {
-          "season": "Зима"
-        },
-        {
-          "season": "Лето"
-        }
-      ],
-      "sex": [
-        {
-          "sex": "мальчик"
-        },
-        {
-          "sex": "девочка"
-        },
-        {
-          "sex": "универсальные"
-        }
-      ]
+        "seasonName": "Лето",
+        "genderName": "Мальчик",
+        "sizes": [{
+          "id": "1",
+          "name": "size"
+        }, {
+          "id": "2",
+          "name": "size"
+        }]
+      }]
     }
   }
 }
