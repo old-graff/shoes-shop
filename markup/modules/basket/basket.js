@@ -1,3 +1,8 @@
+app.controller('BasketController', function ($scope, localStorageService) {
+    localStorageService.set('test', 'test');
+    alert(localStorageService.get('test'));
+});
+
 var Basket = {
     block: false,
     add: function (goodID, sizeID) {

@@ -19,37 +19,44 @@
         "deleteUrl": "#",
         "changeUrl": "#",
         "totalPrice": "12312",
+        "addUrl": "/basket/add",
+        "deleteUrl": "/basket/delete",
+        "updateUrl": "/basket/update",
         "goods": [{
           "id": "1",
           "goodID": "1",
           "sizeID": "1",
           "count": "2",
-          "price": "624",
+          "totalPrice": "624",
           "good": {
             "id": "1",
             "name": "Name",
             "img": "url",
             "url": "#",
-            "description": "description",
             "price": "312",
             "seasonName": "Лето",
             "genderName": "Мальчик"
+          },
+          "size": {
+            "id": "2",
+            "name": "size"
           }
         }, {
           "id": "2",
           "goodID": "1",
           "goodSizeID": "2",
           "count": "2",
-          "price": "624",
+          "totalPrice": "624",
           "good": {
             "id": "1",
             "name": "Name",
             "img": "url",
             "url": "#",
-            "description": "description",
-            "price": "312",
-            "seasonName": "Лето",
-            "genderName": "Мальчик"
+            "price": "312"
+          },
+          "size": {
+            "id": "2",
+            "name": "size"
           }
         }]
       }
