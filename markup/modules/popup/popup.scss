@@ -1,0 +1,21 @@
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 100;
+  &__wrapper {
+    display: table;
+    width: inherit;
+    height: inherit;
+  }
+  &__content {
+    display: table-cell;
+    width: inherit;
+    height: inherit;
+    vertical-align: middle;
+    text-align: center;
+  }
+}

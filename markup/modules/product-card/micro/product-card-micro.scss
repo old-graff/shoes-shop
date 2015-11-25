@@ -46,6 +46,11 @@
     float: right;
     margin-right: 6px;
   }
+  &__size {
+    width: 34px;
+    display: inline-block;
+    text-align: center;
+  }
   &__ico-del {
     display: block;
     position: absolute;
@@ -60,20 +65,27 @@
     }
   }
   &__number {
+    * {
+      //border: 1px solid blue;
+    }
     input {
       border: none;
-      width: 1.3em;
-      margin-left: 1px;
+      width: 1.4em;
+      text-align: center;
     }
     i {
       font-style: normal;
       position: relative;
       top: -1px;
-      margin: 0 2px;
+      margin-right: -4px;
+      display: inline-block;
       &:hover {
         cursor: pointer;
         color: #005b8d;
       }
+    }
+    input + i {
+      margin-left: -4px;
     }
     span {
       display: none;
