@@ -229,7 +229,7 @@ $footer-height: 50px;
 //высота футера
 
 /* ---- slicer-breakpoints-helper ---- */
-.page:after {
+.page:before {
   content: '';
   position: fixed;
   background-color: rgba(255, 255, 255, 0.4);
@@ -272,12 +272,24 @@ $footer-height: 50px;
   left: 0;
 }
 
-.content__right-column:after {
-  content: 'right-column';
-  right: 0;
+/* ---- end ---- */
+.page:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0,0,0,0.0);
+  transition: background-color 0.3s ease 0.3s;
+}
+.page.darken:after {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 100;
 }
 
-/* ---- end ---- */
 
 $header-height: 50px;
 .page {

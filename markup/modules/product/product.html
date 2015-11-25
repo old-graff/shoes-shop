@@ -14,25 +14,8 @@
             <tr><td>Пол:</td><td>Мальчик</td></tr>
             <tr><td>Сезон:</td><td>Лето</td></tr>
             <tr><td>Описание:</td><td>Просторное описание о качестве товара и его удивительных свойствах.</td></tr>
-            <tr elem="price"><td>Цена:</td><td><span>2400₽</span></td></tr>
+            <tr elem="price"><td>Цена:</td><td><span>2400<b class="rub">a</b></span></td></tr>
         </table>
     </div>
-
-    <input type="submit" elem="submit" form="size-form" value="Добавить в корзину">
-
-    <form elem="form" id="size-form">
-        <table elem="size-table">
-            <caption>Выберите размер и количество</caption>
-            <tr>
-                <td>Размеры</td><td>12</td><td>13</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
-            </tr>
-            <tr>
-                <td>Количество</td>
-                {{#repeat 12}}
-                <td><p elem="number"><i>&#8249;</i><input type="text" size="2" maxlength="2" value="0"><i>&#8250;</i></p></td>
-                {{/repeat}}
-          </tr>
-        </table>
-    </form>
 
 </div><!--product-->

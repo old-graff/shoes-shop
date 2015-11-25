@@ -82,6 +82,9 @@
   }
   &__price {
     text-align: right;
+    b {
+      font-size: 1.5rem;
+    }
   }
   &__size {
     text-align: center;
@@ -97,6 +100,9 @@
   &__total-sum {
     font-size: 1.8rem;
     text-align: right;
+    b {
+      margin-left: -4px;
+    }
   }
   &__ready-to-buy {
     display: inline-block;

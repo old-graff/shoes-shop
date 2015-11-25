@@ -1,0 +1,65 @@
+.size-table {
+  padding: 12px 6px;
+  &__size-table {
+    text-align: center;
+    //width: 100%;
+    margin: 0 auto;
+    caption {
+      text-align: left;
+      //padding: 6px 0 6px;
+      //font-weight: bold;
+      padding-top: 20px;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    td {
+      padding: 5px;
+      border-top: 1px solid #CCC;
+      text-align: center;
+    }
+    tr:first-child td {
+      border-top: none;
+    }
+  }
+  &__number {
+    white-space: nowrap;
+    text-align: center;
+    input {
+      width: 1.7em;
+      margin: 0 2px;
+      border: 1px solid #CCC;
+      text-align: center;
+    }
+    i {
+      font-style: normal;
+      font-size: 2.4rem;
+      position: relative;
+      top: 1px;
+      &:hover {
+        cursor: pointer;
+        color: #005b8d;
+      }
+    }
+  }
+  &__form {
+    display: block;
+    clear: left;
+  }
+  &__submit {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 18px;
+    background-color: $color-pink;
+    border: none;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-left: 3px;
+    &:hover {
+      background-color: $color-pink + #111111;
+      color: #FFF;
+    }
+  }
+}
