@@ -30,7 +30,7 @@
 
             </div><!--content__left-column-->
 
-            <div elem="main-column">
+            <div elem="main-column" ng-controller="GoodsController">
               {{#each content.goods}}
                 {{> product-card/product-card this}}
               {{/each}}
@@ -41,10 +41,10 @@
         </div><!--content-->
 
     </div><!--page__content-->
-
+<!--
     {{> popup/popup-open}}
     {{> registration/registration}}
-    {{> popup/popup-close}}
+    {{> popup/popup-close}} -->
 
     <div class="page__buffer"></div>
 

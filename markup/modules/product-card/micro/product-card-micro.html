@@ -1,18 +1,17 @@
-
-<div block="product-card-micro" data-basket-id="{{id}}">
+<div block="product-card-micro" data-basket-id="{{id}}" ng-repeat="good in goods">
     <div elem="img-cont">
         <img src="%=staticPrefix=%img/content/test-img/boots.jpg" alt="">
     </div>
     <div elem="wrapper">
-        <a href="#" elem="title">{{good.name}}</a>
+        <a href="#" elem="title" ng-bind="good.name">{{good.name}}</a>
         <p>
             <span elem="number">
               <i mix="block: js-basket-count-minus">&#8249;</i>
-              <input type="text" size="2" maxlength="2" value="{{count}}" mix="block: js-basket-count-input">
+              <input type="text" size="2" maxlength="2" value="{{count}}" mix="block: js-basket-count-input" ng-model="good.count">
               <i mix="block: js-basket-count-plus">&#8250;</i>
-              <span>пар</span>
             </span>
-            <span elem="price"><span>{{price}}</span><b class="rub">a</b></span>
+            <span elem="size">32</span>
+            <span elem="price"><span ng-bind="good.price * good.count">{{totalPrice}}</span><b class="rub">a</b></span>
         </p>
     </div>
     <a href="#" elem="ico-del" mix="block: js-basket-delete"><i></i></a>

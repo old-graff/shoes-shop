@@ -1,6 +1,18 @@
 app.controller('BasketController', function ($scope, localStorageService) {
-    localStorageService.set('test', 'test');
-    alert(localStorageService.get('test'));
+    $scope.save = function () {
+        localStorageService.set('basket', JSON.stringify($scope.goods));
+    };
+    // localStorageService.clearAll();
+    this.getGoods = function () {
+        return JSON.parse(localStorageService.get('basket'));
+    };
+    $scope.goods = JSON.parse(localStorageService.get('basket'));
+    $scope.delete = function (id) {
+        if ($scope.goods[id]) {
+            delete $scope.goods[id];
+        }
+        this.save();
+    }.bind(this);
 });
 
 var Basket = {

@@ -1,3 +1,25 @@
+app.controller('FilterController', function ($scope, GoodsService, $http) {
+    $scope.filter = GoodsService.filter;
+    $scope.sizes;
+    $scope.brands;
+    $scope.seasons;
+    $scope.genders;
+    $scope.initData = function () {
+        $http.get($scope.sizesUrl).success(function (res) {
+            $scope.sizes = res;
+        });
+        $http.get($scope.gendersUrl).success(function (res) {
+            $scope.genders = res;
+        });
+        $http.get($scope.brandsUrl).success(function (res) {
+            $scope.brands = res;
+        });
+        $http.get($scope.seasonsUrl).success(function (res) {
+            $scope.seasons = res;
+        });
+    };
+});
+
 $('.filter input[type=checkbox][name]').change(function () {
     var parent = $(this).closest('p');
     var checkedInputsCount = parent.find('input[type=checkbox][name]:checked').length;

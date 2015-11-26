@@ -15,7 +15,7 @@
     </a>
     <span elem="size-list">
       {{#each sizes}}
-        <a href="#" data-good-id="{{../id}}" data-size-id="{{id}}">{{name}}</a><br>
+        <a href="" data-good-id="{{../id}}" data-size-id="{{id}}" ng-click="addInBasket({{../id}}, {{id}})">{{name}}</a><br>
       {{/each}}
     </span>
   </p>

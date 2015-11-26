@@ -63,50 +63,36 @@ $('a.scrollto[href^=#]').each(function() {
   });
 });
 var app = angular.module('shoesPrj', ['checklist-model', 'LocalStorageModule']);
-app.config(function (localStorageServiceProvider) {
+app.config(function(localStorageServiceProvider) {
   localStorageServiceProvider
     .setPrefix('shoesPrj')
     .setStorageType('sessionStorage')
     .setNotify(true, true)
 });
-app.service('BasketService', function() {
-  this.products = false;
-  this.getProducts = function() {
-    if (!this.products) {
-      this.products = this.requestProducts();
-    }
-    return this.products;
-  };
-  this.addProduct = function(product) {
-    this.products.push(product);
-  };
-  this.deleteProduct = function(productID) {
-    for (var i = 0; i < this.products.length; i++) {
-      if (this.products[i]['id'] == productID) {
-        delete this.products[i];
-        break;
-      }
-    }
-  };
-  this.requestProducts = function() {
+app.service('GoodsService', function($http) {
+  this.search = function () {
     return [{
-      productID: 1,
-      sizeID: 1,
-      count: 2,
-      name: 'product 1',
-      price: 3223
-    }, {
-      productID: 2,
-      sizeID: 1,
-      count: 2,
-      name: 'product 2',
-      price: 3212
-    }, {
-      productID: 3,
-      sizeID: 2,
-      count: 12,
-      name: 'product 3',
-      price: 3123
-    }, ]
-  }
+      id: '1',
+      name: 'name',
+      seasonName: 'summer',
+      genderName: 'boy',
+      sizes: [{
+        id: '1',
+        name: '21'
+      }, {
+        id: '2',
+        name: '22'
+      }],
+      brand: {
+        name: 'brand'
+      }
+    }];
+  };
+  this.filter = {
+    sizes: [],
+    genders: [],
+    seasons: [],
+    brands: []
+  };
+  this.goods = this.search();
 });
