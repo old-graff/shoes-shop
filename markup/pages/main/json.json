@@ -23,7 +23,6 @@
         "deleteUrl": "/basket/delete",
         "updateUrl": "/basket/update",
         "goods": [{
-          "id": "1",
           "goodID": "1",
           "sizeID": "1",
           "count": "2",
@@ -42,7 +41,6 @@
             "name": "size"
           }
         }, {
-          "id": "2",
           "goodID": "1",
           "goodSizeID": "2",
           "count": "2",
@@ -137,10 +135,10 @@
         "genderName": "Мальчик",
         "sizes": [{
           "id": "1",
-          "name": "size"
+          "name": "size1"
         }, {
           "id": "2",
-          "name": "size"
+          "name": "size2"
         }]
       }]
     }

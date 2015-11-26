@@ -3,16 +3,16 @@
         <img src="%=staticPrefix=%img/content/test-img/boots.jpg" alt="">
     </div>
     <div elem="wrapper">
-        <a href="#" elem="title" ng-bind="good.name">{{good.name}}</a>
+        <a href="{{good.url}}" elem="title" ng-bind="good.name">{{good.name}}</a>
         <p>
             <span elem="number">
               <i mix="block: js-basket-count-minus">&#8249;</i>
               <input type="text" size="2" maxlength="2" value="{{count}}" mix="block: js-basket-count-input" ng-model="good.count">
               <i mix="block: js-basket-count-plus">&#8250;</i>
             </span>
-            <span elem="size">32</span>
-            <span elem="price"><span ng-bind="good.price * good.count">{{totalPrice}}</span><b class="rub">a</b></span>
+            <span elem="size" ng-bind="good.sizeName">{{size.name}}</span>
+            <span elem="price"><span ng-bind="good.count * good.price">{{totalPrice}}</span><b class="rub">a</b></span>
         </p>
     </div>
-    <a href="#" elem="ico-del" mix="block: js-basket-delete"><i></i></a>
+    <a href="" elem="ico-del" mix="block: js-basket-delete" ng-click="delete(good.goodID, good.sizeID)"><i></i></a>
 </div><!--product-card-micro-->

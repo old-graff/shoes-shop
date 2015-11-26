@@ -70,6 +70,7 @@ app.config(function(localStorageServiceProvider) {
     .setNotify(true, true)
 });
 app.service('GoodsService', function($http) {
+  this.apiServer = 'http://shoes.local';
   this.search = function () {
     return [{
       id: '1',

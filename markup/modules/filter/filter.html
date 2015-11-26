@@ -1,8 +1,5 @@
-<div block="filter" ng-controller="FilterController" ng-init="sizesUrl='http://shoes.local/data/sizes'; brandsUrl='http://shoes.local/data/brands'; gendersUrl='http://shoes.local/data/genders'; seasonsUrl='http://shoes.local/data/seasons'">
+<div block="filter">
     <p elem="title">Фильтры</p>
-    <p ng-repeat="size in sizes">
-        <span ng-bind="size.name"></span>
-    </p>
 {{#with filterForm}}
     <form action="#" method="post">
         <div elem="value">
