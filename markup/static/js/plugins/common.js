@@ -69,9 +69,82 @@ app.config(function(localStorageServiceProvider) {
     .setStorageType('sessionStorage')
     .setNotify(true, true)
 });
+
+app.service('BasketService', function(localStorageService) {
+  this.getTotalPrice = function() {
+    var sum = 0;
+    for (var i = 0; i < this.goods.length; i++) {
+      sum += +this.goods[i]['price'] * +this.goods[i]['count'];
+    }
+    return sum;
+  };
+
+  this.getGoods = function () {
+    var result = JSON.parse(localStorageService.get('basket'));
+    if (!result){
+      return [];
+    }
+    return result;
+  };
+
+  this.goods = this.getGoods();
+  this.totalPrice = this.getTotalPrice();
+
+
+
+  this.save = function() {
+    localStorageService.set('basket', JSON.stringify(this.goods));
+    this.totalPrice = this.getTotalPrice();
+  };
+
+  this.add = function(obj) {
+    if (!this.goods) {
+      this.goods = [obj];
+      this.save();
+      this.totalPrice = 0;
+      return;
+    }
+    for (var i = 0; i < this.goods.length; i++) {
+      if (this.goods[i]['goodID'] == obj['goodID'] && this.goods[i]['sizeID'] == obj['sizeID']) {
+        this.goods[i]['count']++;
+        this.save();
+        return;
+      }
+    }
+    this.goods.push(obj);
+    this.save();
+    return;
+  };
+
+  this.delete = function(goodID, sizeID) {
+    if (!this.goods) {
+      return;
+    }
+    for (var i = 0; i < this.goods.length; i++) {
+      if (this.goods[i]['goodID'] == goodID && this.goods[i]['sizeID'] == sizeID) {
+        this.goods.splice(i, 1);
+        this.save();
+        return;
+      }
+    }
+  };
+  this.updateCount = function(goodID, sizeID, count) {
+    if (!this.goods) {
+      return;
+    }
+    for (var i = 0; i < this.goods.length; i++) {
+      if (this.goods[i]['goodID'] == goodID && this.goods[i]['sizeID'] == sizeID) {
+        this.goods[i]['count'] = count;
+        this.save();
+        return;
+      }
+    }
+  }
+});
+
 app.service('GoodsService', function($http) {
   this.apiServer = 'http://shoes.local';
-  this.search = function () {
+  this.search = function() {
     return [{
       id: '1',
       name: 'name',

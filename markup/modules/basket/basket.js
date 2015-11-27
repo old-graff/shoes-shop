@@ -1,17 +1,42 @@
-app.controller('BasketController', function ($scope, localStorageService) {
-    $scope.save = function () {
-        localStorageService.set('basket', JSON.stringify($scope.goods));
+app.controller('BasketController', function ($scope, BasketService) {
+    $scope.goods = BasketService.goods;
+
+    $scope.getTotalPrice = function () {
+        return BasketService.totalPrice;
     };
-    // localStorageService.clearAll();
-    $scope.goods = JSON.parse(localStorageService.get('basket'));
+
+    $scope.updateCount = function (good) {
+        BasketService.updateCount(good.goodID, good.sizeID, good.count);
+    };
+
     $scope.delete = function (goodID, sizeID) {
-        for (var i = 0; i < $scope.goods.length; i++) {
-            if ($scope.goods[i]['goodID'] == goodID && sizeID == $scope.goods[i]['sizeID']) {
-                $scope.goods.splice(i, 1);
-            }
-        }
-        $scope.save();
+        BasketService.delete(goodID, sizeID);
     };
+
+    $scope.decrement = function (good) {
+        good.count--;
+        if (good.count < 1) {
+            good.count = 1;
+        }
+        $scope.updateCount(good);
+    };
+
+    $scope.increment = function (good) {
+        good.count++;
+        $scope.updateCount(good);
+    };
+
+    $scope.getTotalCount = function () {
+        var count = 0;
+        if (!$scope.goods){
+            return count;
+        }
+        for (var i = 0; i < $scope.goods.length; i++) {
+          count += $scope.goods[i]['count'];
+        }
+        return count;
+    };
+
 });
 
 // var Basket = {

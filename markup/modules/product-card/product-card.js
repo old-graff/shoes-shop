@@ -1,17 +1,6 @@
-app.controller('GoodsController', function ($scope, localStorageService) {
-    $scope.addInBasket = function (goodID, sizeID, goodName, goodUrl, goodImg, goodPrice, sizeName) {
-        var goods = JSON.parse(localStorageService.get('basket'));
-        if (!goods) {
-            goods = [];
-        }
-        for (var i = 0; i < goods.length; i++) {
-            if (goods[i]['goodID'] == goodID && goods[i]['sizeID'] == sizeID) {
-                goods[i]['count']++;
-                localStorageService.set('basket', JSON.stringify(goods));
-                return true;
-            }
-        }
-        goods.push({
+app.controller('GoodsController', function ($scope, BasketService) {
+    $scope.addInBasket = function (goodID, sizeID, goodName, goodUrl, goodImg, goodPrice, sizeName, brandName) {
+        var row = {
             goodID: goodID,
             sizeID: sizeID,
             name: goodName,
@@ -19,9 +8,10 @@ app.controller('GoodsController', function ($scope, localStorageService) {
             img: goodImg,
             price: goodPrice,
             count: 1,
-            sizeName: sizeName
-        });
-        localStorageService.set('basket', JSON.stringify(goods));
+            sizeName: sizeName,
+            brandName: brandName
+        };
+        BasketService.add(row);
     };
 });
 //

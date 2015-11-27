@@ -1,4 +1,4 @@
-<div block="basket-big">
+<div block="basket-big" ng-controller="BasketController">
 
     <p elem="title">Ваши товары</p>
 
@@ -14,32 +14,32 @@
         </tr>
         </thead>
         <tbody>
-        {{#repeat 7}}
-        <tr>
+        <tr ng-repeat="good in goods">
             <td>
-                <a href="#" elem="del-ico"><i></i></a>
+                <a href="" elem="del-ico" ng-click="delete(good.goodID, good.sizeID)"><i></i></a>
                 <div elem="img-cont">
                     <img src="%=staticPrefix=%img/content/test-img/boots.jpg" alt="">
                 </div>
             </td>
-            <td>Ботинки Transformers повседневные кеды для мальчика 9999A</td>
-            <td>Kakadu Летающие звери</td>
-            <td elem="size">32</td>
+            <td ng-bind="good.name"></td>
+            <td ng-bind="good.brandName"></td>
+            <td elem="size" ng-bind="sizeName"></td>
             <td>
                 <p elem="number">
-                    <i>&#8249;</i><input type="text" size="2" maxlength="2" value="99"><i>&#8250;</i>
+                    <i ng-click="decrement(good)">&#8249;</i>
+                    <input type="text" size="2" maxlength="2" ng-model="good.count">
+                    <i ng-click="increment(good)">&#8250;</i>
                 </p>
             </td>
-            <td elem="price"><span>2400<b class="rub">a</b></span></td>
+            <td elem="price"><span>{&#123;good.count * good.price}}<b class="rub">a</b></span></td>
         </tr>
-        {{/repeat}}
         </tbody>
         <tfoot>
             <tr>
                 <td colspan="3"><a href="#" elem="ready-to-buy">Оформить сделку</a></td>
                 <td elem="total">Итого:</td>
-                <td elem="total-number">199</td>
-                <td elem="total-sum">32&nbsp;845&nbsp;<b class="rub">a</b></td>
+                <td elem="total-number" ng-bind="getTotalCount()"></td>
+                <td elem="total-sum" >{&#123;getTotalPrice()}} <b class="rub">a</b></td>
             </tr>
         </tfoot>
     </table>
