@@ -1,22 +1,28 @@
-<div block="size-table">
+<div block="size-table" ng-controller="GoodViewController">
 
-    <form elem="form" id="size-form">
-        <table elem="size-table">
-            <caption>Выберите&nbsp;размер и&nbsp;количество</caption>
-            <tr>
-                <td>Размеры</td>
-                <td>Количество</td>
-            </tr>
-            {{#repeat 7}}
-            <tr>
-                <td>{{@index}}</td>
-                <td><p elem="number"><i>&#8249;</i><input type="text" size="2" maxlength="2" value="0"><i>&#8250;</i>
-                </p></td>
-            </tr>
-            {{/repeat}}
-        </table>
+  <form elem="form" id="size-form">
+    <table elem="size-table">
+      <caption>Выберите&nbsp;размер и&nbsp;количество</caption>
+      <tr>
+        <td>Размеры</td>
+        <td>Количество</td>
+      </tr>
+      {{#repeat 7}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>
+            <p elem="number">
+              <i>&#8249;</i>
+              <input maxlength="2" size="2" type="text" ng-model="goods[1]">
+              <i>&#8250;</i>
+            </p>
+          </td>
+        </tr>
+      {{/repeat}}
+    </table>
 
-        <input type="submit" elem="submit" value="Добавить в корзину">
-    </form>
+    <input elem="submit" type="submit" value="Добавить в корзину">
+  </form>
 
-</div><!--size-table-->
+</div>
+<!--size-table-->
