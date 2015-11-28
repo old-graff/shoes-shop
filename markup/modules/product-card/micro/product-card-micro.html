@@ -4,7 +4,20 @@
     </div>
     <div elem="wrapper">
         <a href="{{good.url}}" elem="title" ng-bind="good.name">{{good.name}}</a>
-        <p>
+        <table elem="info">
+            <tr>
+                <th>Размер</th>
+                <th>Кол-во</th>
+                <th>Цена</th>
+            </tr>
+            <tr>
+                <td>32</td>
+                <td>99</td>
+                <td>9800<b class="rub">a</b></td>
+            </tr>
+        </table>
+
+        <p style="display: none">
             <span elem="number">
               <i mix="block: js-basket-count-minus" ng-click="decrement(good)">&#8249;</i>
               <input type="text" size="2" maxlength="2" mix="block: js-basket-count-input" ng-model="good.count" ng-change="updateCount(good)">

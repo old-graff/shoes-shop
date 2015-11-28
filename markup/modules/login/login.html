@@ -1,13 +1,13 @@
 <div block="login">
     <div elem="invite">
-        <a href="#" elem="entry" mix="block:js-open-login-form">Войти</a>
+        <a href="#" elem="entry" mix="block:js-open-login-form" ng-click="$rootScope.showPopup=true">Войти</a>
         <a href="#" elem="registration">Зарегестрироваться</a>
     </div>
 
     <form action="#" method="post" elem="form">
         <label>
             <span>Логин</span>
-            <input type="text" placeholder="Логин">
+            <input type="text" placeholder="Эл. почта">
         </label>
         <label>
             <span>Пароль</span>

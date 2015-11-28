@@ -15,18 +15,14 @@
       td {
         border-top: 1px solid #CCC;
         padding: 6px 10px;
-
       }
       td:first-child {
         width: 60px;
         padding: 0;
         position: relative;
-        &:hover a {
-          background-color: rgba(255, 255, 255, 0.5);
-          i {
-            opacity: 0.7;
-          }
-        }
+      }
+      td:nth-child(6) {
+        width: 100px;
       }
     }
     tfoot tr td {
@@ -43,14 +39,20 @@
     height: 60px;
     background-color: rgba(255, 255, 255, 0.0);
     padding: 10px;
-    transition: background-color 0.3s ease-in-out 0.4s;
+    transition: background-color 0.2s ease-in-out 0.3s;
     i {
       display: block;
       @extend %icon;
       @include icon_size(40px);
       @extend %icon_close;
       opacity: 0;
-      transition: opacity 0.3s ease-in-out 0.4s;
+      transition: opacity 0.2s ease-in-out 0.3s;
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      i {
+        opacity: 0.7;
+      }
     }
   }
   &__img-cont {
@@ -74,6 +76,12 @@
       font-size: 2.4rem;
       position: relative;
       top: 1px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
       &:hover {
         cursor: pointer;
         color: #005b8d;
@@ -102,22 +110,6 @@
     text-align: right;
     b {
       margin-left: -4px;
-    }
-  }
-  &__ready-to-buy {
-    display: inline-block;
-    height: 32px;
-    line-height: 32px;
-    padding: 0 20px;
-    background-color: $color-pink;
-    color: #FFF;
-    text-decoration: none;
-    float: left;
-    font-size: 1.8rem;
-    margin-top: 4px;
-    &:hover {
-      background-color: $color-pink + #111111;
-      color: #FFF;
     }
   }
 }

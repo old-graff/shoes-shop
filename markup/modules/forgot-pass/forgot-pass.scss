@@ -4,6 +4,22 @@
   padding: 20px;
   text-align: left;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  position: relative;
+  &__close-ico {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 4px;
+    right: 4px;
+    @extend %icon;
+    @include icon_size(16px);
+    @extend %icon_close;
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      opacity: 1;
+    }
+  }
   &__title {
     font-size: 1.8rem;
     margin-bottom: 10px;

@@ -1,4 +1,6 @@
-<div block="forgot-pass">
+<div block="forgot-pass" ng-hide="!checkState('forgot')">
+    <i elem="close-ico" ng-click="closePopup()"></i>
+
     <p elem="title">Востановление пароля</p>
     <form elem="form">
         <label><span>Эл. почта</span><input type="email"></label>

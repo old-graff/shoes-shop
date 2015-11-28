@@ -1,4 +1,4 @@
-.registration {
+.login2 {
   display: inline-block;
   background-color: $color-yellow;
   padding: 20px;
@@ -14,7 +14,6 @@
     @extend %icon;
     @include icon_size(16px);
     @extend %icon_close;
-    //border: 1px solid blue;
     opacity: 0.5;
     cursor: pointer;
     &:hover {
@@ -63,5 +62,12 @@
       background-color: $color-pink + #111111;
       color: #FFF;
     }
+  }
+  &__forgot-pass {
+    font-size: 1.2rem;
+    text-align: left;
+    position: relative;
+    top: -4px;
+    margin-left: 80px;
   }
 }

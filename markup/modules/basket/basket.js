@@ -9,6 +9,7 @@ app.controller('BasketController', function ($scope, BasketService) {
         if (good.count < 1) {
             good.count = 1;
         }
+        //good.count = good.count.replace(/\D/, '');
         BasketService.updateCount(good.goodID, good.sizeID, good.count);
     };
 

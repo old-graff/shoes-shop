@@ -1,0 +1,15 @@
+<div block="login2" ng-hide="!checkState('login')">
+    <i elem="close-ico" ng-click="closePopup()"></i>
+
+    <form action="#" method="post" elem="form">
+        <p elem="title">Авторизация <a href="" ng-click="setState('reg')">Регистрация</a></p>
+
+        <label><span>Эл. почта</span><input type="email"></label>
+        <label><span>Пароль</span><input type="password"></label>
+
+        <p elem="forgot-pass"><a href="" ng-click="setState('forgot')">Забыл пароль</a></p>
+
+        <p elem="submit-cont"><input type="submit" value="Войти"></p>
+
+    </form>
+</div><!--login-->

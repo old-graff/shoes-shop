@@ -36,12 +36,15 @@
     width: 100%;
     color: $color-pink;
     margin-top: 1px;
-    //&:hover {
-    //  overflow: visible;
-    //  white-space: normal;
-    //  position: absolute;
-    //}
   }
+  &__info {
+    th {
+      font-weight: normal;
+      font-size: 1rem;
+      color: #BBB;
+    }
+  }
+
   &__price {
     float: right;
     margin-right: 6px;

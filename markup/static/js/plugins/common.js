@@ -63,6 +63,10 @@ $('a.scrollto[href^=#]').each(function() {
   });
 });
 var app = angular.module('shoesPrj', ['checklist-model', 'LocalStorageModule']);
+
+app.run(function($rootScope){
+  $rootScope.showPopup = false;
+});
 app.config(function(localStorageServiceProvider) {
   localStorageServiceProvider
     .setPrefix('shoesPrj')
