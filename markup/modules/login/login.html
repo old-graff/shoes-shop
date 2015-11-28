@@ -1,7 +1,7 @@
-<div block="login">
+<div block="login" ng-show="isGuest" style="display: none">
     <div elem="invite">
-        <a href="#" elem="entry" mix="block:js-open-login-form" ng-click="$rootScope.showPopup=true">Войти</a>
-        <a href="#" elem="registration">Зарегестрироваться</a>
+        <a href="" elem="entry" mix="block:js-open-login-form" ng-click="login()">Войти</a>
+        <a href="" elem="registration"  ng-click="openPopup()">Зарегестрироваться</a>
     </div>
 
     <form action="#" method="post" elem="form">

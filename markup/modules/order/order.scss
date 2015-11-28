@@ -1,0 +1,38 @@
+.order {
+  padding-right: 20px;
+  &__title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  &__table {
+    width: 100%;
+    tr {
+      th {
+        padding: 0 6px 8px 6px;
+      }
+    }
+    tr {
+      td {
+        border-top: 1px solid #CCC;
+        padding: 6px 10px;
+      }
+      td:first-child {
+        width: 60px;
+        padding: 0;
+        position: relative;
+        text-align: center;
+      }
+      td:nth-child(2) {
+        text-align: center;
+      }
+      td:nth-child(5) {
+        width: 80px;
+        text-align: right;
+      }
+      td:nth-child(6) {
+        width: 100px;
+        text-align: right;
+      }
+    }
+  }
+}

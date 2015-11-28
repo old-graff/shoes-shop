@@ -1,5 +1,15 @@
-app.controller('GoodsController', function ($scope, BasketService) {
+app.controller('GoodsController', function ($scope, BasketService, $rootScope) {
     $scope.addInBasket = function (goodID, sizeID, goodName, goodUrl, goodImg, goodPrice, sizeName, brandName) {
+        if ($rootScope.isGuest) {
+            $rootScope.openPopup();
+            return;
+        }
+        $('.basket__wrapper').css({
+            right: 0
+        }).delay(1000)
+        .animate({
+            right: -230
+        });
         var row = {
             goodID: goodID,
             sizeID: sizeID,
