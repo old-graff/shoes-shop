@@ -6,51 +6,64 @@
 <!--[if IE 9 ]>
 <html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
-<html class="no-js" lang="ru"><!--<![endif]-->
+<html class="no-js" lang="ru">
+<!--<![endif]-->
 {{#with page_main}}
+
 <head>
-    {{> head/head head}}
+  {{> head/head head}}
 </head>
 
 <body block="page" ng-app="shoesPrj">
 
-<section elem="wrapper">
+  <section elem="wrapper">
 
     <div elem="header">
-        {{> header/header header}}
-    </div><!--page__header-->
+      {{> header/header header}}
+    </div>
+    <!--page__header-->
 
     <div elem="content">
 
-        <div block="content" mod="one-column" mix="block:container">
+      <div block="content" mod="one-column" mix="block:container">
 
-            <div elem="left-column">
 
-                {{> delivery-address/delivery-address delivery-address}}
+          <div elem="left-column">
 
-            </div><!--content__left-column-->
+            {{> delivery-address/delivery-address delivery-address}}
 
-            <div elem="main-column">
+          </div>
+          <!--content__left-column-->
 
-                {{> basket-big/basket-big basket-big}}
+          <div elem="main-column">
 
-                <br elem="clear">
+            {{> basket-big/basket-big basket-big}}
 
-            </div><!--content__main-column-->
+            <br elem="clear">
 
-        </div><!--content-->
+          </div>
+          <!--content__main-column-->
 
-    </div><!--page__content-->
+
+
+      </div>
+      <!--content-->
+
+    </div>
+    <!--page__content-->
 
     <div class="page__buffer"></div>
 
-</section><!--page__wrapper-->
+  </section>
+  <!--page__wrapper-->
 
-<div elem="footer">
+  <div elem="footer">
     {{> footer/footer footer}}
-</div><!--page__footer-->
+  </div>
+  <!--page__footer-->
 
-<script src="/static/js/main.js"></script>
+  <script src="/static/js/main.js"></script>
 </body>
 {{/with}}
+
 </html>

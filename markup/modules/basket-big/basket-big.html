@@ -23,11 +23,11 @@
             </td>
             <td ng-bind="good.name"></td>
             <td ng-bind="good.brandName"></td>
-            <td elem="size" ng-bind="sizeName"></td>
+            <td elem="size" ng-bind="good.sizeName"></td>
             <td>
                 <p elem="number">
                     <i ng-click="decrement(good)">&#8249;</i>
-                    <input type="text" size="2" maxlength="2" ng-model="good.count">
+                    <input type="text" size="2" maxlength="2" ng-model="good.count" ng-change="updateCount(good)">
                     <i ng-click="increment(good)">&#8250;</i>
                 </p>
             </td>
@@ -43,7 +43,5 @@
             </tr>
         </tfoot>
     </table>
-
-
 
 </div><!--basket-big-->

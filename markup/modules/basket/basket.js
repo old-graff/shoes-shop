@@ -6,6 +6,9 @@ app.controller('BasketController', function ($scope, BasketService) {
     };
 
     $scope.updateCount = function (good) {
+        if (good.count < 1) {
+            good.count = 1;
+        }
         BasketService.updateCount(good.goodID, good.sizeID, good.count);
     };
 
@@ -15,9 +18,6 @@ app.controller('BasketController', function ($scope, BasketService) {
 
     $scope.decrement = function (good) {
         good.count--;
-        if (good.count < 1) {
-            good.count = 1;
-        }
         $scope.updateCount(good);
     };
 
@@ -32,7 +32,7 @@ app.controller('BasketController', function ($scope, BasketService) {
             return count;
         }
         for (var i = 0; i < $scope.goods.length; i++) {
-          count += $scope.goods[i]['count'];
+            count += +$scope.goods[i]['count'];
         }
         return count;
     };
