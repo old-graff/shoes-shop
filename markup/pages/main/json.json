@@ -9,7 +9,7 @@
       "title": "Логотип1",
       "phone": "(8482) 20-20-20",
       "email": "lindal@mail.ru",
-      "isGuest": false,
+      "isGuest": true,
       "lk": {
         "username": "lindal",
         "url": "#"

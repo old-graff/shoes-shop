@@ -18,11 +18,9 @@
   {{/unless}}
 
   <div elem="user-ui">
-    {{#if isGuest}}
-      {{> login/login loginForm}}
-      {{else}}
-      {{> basket/basket basket}}
-    {{/if}}
+    {{> login/login loginForm}}
+    {{> basket/basket basket}}
   </div>
 
-</div><!--header-->
+</div>
+<!--header-->

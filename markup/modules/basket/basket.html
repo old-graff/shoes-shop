@@ -1,4 +1,4 @@
-<div block="basket" data-add-url="{{addUrl}}" data-delete-url="{{deleteUrl}}" data-update-url="{{updateUrl}}" ng-controller="BasketController">
+<div block="basket" ng-controller="BasketController" ng-show="!isGuest" style="display: none">
     <div elem="header">
         <p elem="price"><span>{&#123;getTotalPrice()}}</span><b class="rub">a</b></p>
         <p elem="count"></p>
