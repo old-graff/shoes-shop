@@ -1,20 +1,23 @@
 <div block="size-table">
 
     <form elem="form" id="size-form">
-        <table elem="size-table">
-            <caption>Выберите&nbsp;размер и&nbsp;количество</caption>
-            <tr>
-                <td>Размеры</td>
-                <td>Количество</td>
-            </tr>
-            {{#repeat 12}}
-            <tr>
-                <td>{{@index}}</td>
-                <td><p elem="number"><i>&#8249;</i><input type="text" size="2" maxlength="2" value="0"><i>&#8250;</i>
-                </p></td>
-            </tr>
-            {{/repeat}}
-        </table>
+        <p elem="table-caption">Выберите&nbsp;размер и&nbsp;количество</p>
+        <div elem="table-limiter">
+            <table elem="size-table">
+                <tr>
+                    <td>Размеры</td>
+                    <td>Количество</td>
+                </tr>
+                {{#repeat 12}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td><p elem="number"><i>&#8249;</i><input type="text" size="2" maxlength="2" value="0"><i>
+                        &#8250;</i>
+                    </p></td>
+                </tr>
+                {{/repeat}}
+            </table>
+        </div>
 
         <input type="submit" elem="submit" value="Добавить в корзину">
     </form>

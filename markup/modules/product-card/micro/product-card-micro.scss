@@ -1,5 +1,5 @@
 .product-card-micro {
-  //height: 42px;
+  height: 52px;
   font-size: 1.1rem;
   border: 1px solid $color-yellow-light;
   margin: 6px 6px;
@@ -9,20 +9,20 @@
     font-size: 1.1rem;
   }
   &__img-cont {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     position: relative;
     left: 0;
     top: 0;
     float: left;
     img {
-      @include img-max-size(40px, 40px)
+      @include img-max-size(50px, 50px)
     }
   }
   &__wrapper {
     //border: 1px solid blue;
-    margin-left: 44px;
-    height: 40px;
+    margin-left: 54px;
+    height: 52px;
     p {
       font-size: 1.8rem;
       color: #444;
@@ -35,24 +35,37 @@
     display: block;
     width: 100%;
     color: $color-pink;
-    margin-top: 1px;
+    margin-top: 3px;
+    margin-left: 4px;
+    margin-bottom: 4px;
   }
   &__info {
+    width: 100%;
     th {
       font-weight: normal;
       font-size: 1rem;
       color: #BBB;
+      padding-bottom: 2px;
+      //border-left: 1px solid #CCC;
+      &:first-child {
+        border-left: none;
+      }
     }
-  }
-
-  &__price {
-    float: right;
-    margin-right: 6px;
-  }
-  &__size {
-    width: 34px;
-    display: inline-block;
-    text-align: center;
+    tr {
+      td {
+        //border-left: 1px solid #CCC;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #333;
+        &:nth-child(3) {
+          text-align: right;
+          padding-right: 4px;
+        }
+        &:first-child {
+          border-left: none;
+        }
+      }
+    }
   }
   &__ico-del {
     display: block;
@@ -60,7 +73,7 @@
     left: 1px;
     top: 1px;
     @extend %icon;
-    @include icon_size(8px);
+    @include icon_size(10px);
     @extend %icon_close;
     opacity: 0.7;
     &:hover {
@@ -68,30 +81,33 @@
     }
   }
   &__number {
-    * {
-      //border: 1px solid blue;
-    }
     input {
       border: none;
-      width: 1.4em;
+      width: 1.5em;
       text-align: center;
+      position: relative;
+      top: -1px;
     }
     i {
       font-style: normal;
       position: relative;
-      top: -1px;
-      margin-right: -4px;
+      top: -2px;
+      margin-right: -3px;
       display: inline-block;
+      font-size: 1.4rem;
       &:hover {
         cursor: pointer;
         color: #005b8d;
       }
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
     input + i {
-      margin-left: -4px;
-    }
-    span {
-      display: none;
+      margin-left: -3px;
     }
   }
 }

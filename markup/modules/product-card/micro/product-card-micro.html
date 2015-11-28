@@ -11,9 +11,15 @@
                 <th>Цена</th>
             </tr>
             <tr>
-                <td>32</td>
-                <td>99</td>
-                <td>9800<b class="rub">a</b></td>
+                <td ng-bind="good.sizeName">{{size.name}}</td>
+                <td>
+                    <span elem="number">
+                        <i mix="block: js-basket-count-minus" ng-click="decrement(good)">&#8249;</i>
+                        <input type="text" size="2" maxlength="2" mix="block: js-basket-count-input" ng-model="good.count" ng-change="updateCount(good)">
+                        <i mix="block: js-basket-count-plus" ng-click="increment(good)">&#8250;</i>
+                    </span>
+                </td>
+                <td><span ng-bind="good.count * good.price">{{totalPrice}}</span><b class="rub">a</b></td>
             </tr>
         </table>
 
