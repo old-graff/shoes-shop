@@ -1,0 +1,32 @@
+.user-name {
+  position: relative;
+  overflow: hidden;
+  height: inherit;
+  &:hover {
+    overflow: visible;
+  }
+  &__menu {
+    background-color: $color-yellow-light;
+    position: relative;
+    li {
+      height: 48px;
+      border-top: 1px solid #CCC;
+      border-left: 10px solid $color-yellow-light;
+      border-right: 10px solid $color-yellow-light;
+      z-index: 10;
+      &:first-child {
+        border: none;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      height: 96px;
+      width: 100%;
+      right: 0;
+      bottom: 0;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      z-index: -1;
+    }
+  }
+}

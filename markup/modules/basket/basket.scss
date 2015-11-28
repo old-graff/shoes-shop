@@ -85,7 +85,13 @@
     .basket__checkout {
       right: 0;
     }
-
+  }
+  &__add-ok {
+    background-color: $color-blue;
+    font-weight: bold;
+    padding: 8px 10px;
+    color: #FFF;
+    text-align: center;
   }
   &__content {
     //overflow-y: auto;

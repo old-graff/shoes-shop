@@ -1,26 +1,24 @@
 <div block="header">
 
-  <div elem="logo">
-    <p>{{title}}</p>
-  </div>
-  <div elem="search-cont">
-    {{> search/search search}}
-  </div>
-
-  <div elem="contact-info">
-    <p elem="phone">{{phone}}</p>
-    <a elem="email" href="mailto:{{email}}">{{email}}</a>
-  </div>
-  {{#unless isGuest}}
-    <div elem="user-name">
-      <a href="#">Иван М.</a>
+    <div elem="logo">
+        <p>{{title}}</p>
     </div>
-  {{/unless}}
+    <div elem="search-cont">
+        {{> search/search search}}
+    </div>
 
-  <div elem="user-ui">
-    {{> login/login loginForm}}
-    {{> basket/basket basket}}
-  </div>
+    <div elem="contact-info">
+        <p elem="phone">{{phone}}</p>
+        <a elem="email" href="mailto:{{email}}">{{email}}</a>
+    </div>
+    <div elem="user-name">
+        {{> user-name/user-name}}
+    </div>
+
+    <div elem="user-ui">
+        {{> login/login loginForm}}
+        {{> basket/basket basket}}
+    </div>
 
 </div>
 <!--header-->
