@@ -1,0 +1,14 @@
+{
+  "loginForm_block": {
+    "action": "#",
+    "method": "post",
+    "fields": {
+      "login": {
+        "name": "login"
+      },
+      "pass": {
+        "name": "pass"
+      }
+    }
+  }
+}

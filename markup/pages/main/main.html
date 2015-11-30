@@ -12,12 +12,12 @@
     {{> head/head head}}
 </head>
 
-<body block="page" ng-app="shoesPrj">
+<body block="page" ng-app="shoesPrj" ng-init="isGuest={{header.isGuest}}">
 
 <section elem="wrapper">
 
     <div elem="header">
-        {{> header/header header}}
+        {{> header/header header=header forms=forms}}
     </div><!--page__header-->
 
     <div elem="content">
@@ -26,7 +26,7 @@
 
             <div elem="left-column">
 
-                {{> filter/filter content}}
+                {{> filter/filter filterForm=forms.filterForm goodsCount=content.goodsCount}}
 
             </div><!--content__left-column-->
 
@@ -43,9 +43,9 @@
     </div><!--page__content-->
 
     {{> popup/popup-open}}
-    {{> registration/registration}}
-    {{> login2/login2 loginForm}}
-    {{> forgot-pass/forgot-pass}}
+    {{> registration/registration forms.regForm }}
+    {{> login2/login2 forms.loginForm }}
+    {{> forgot-pass/forgot-pass forms.forgotForm }}
     {{> popup/popup-close}}
 
 
@@ -54,7 +54,7 @@
 </section><!--page__wrapper-->
 
 <div elem="footer">
-    {{> footer/footer footer}}
+    {{> footer/footer}}
 </div><!--page__footer-->
 
 <script src="/static/js/main.js"></script>

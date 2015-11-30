@@ -1,146 +1,19 @@
 {
   "page_main": {
-    "head": {
-      "title": "title",
-      "description": "description",
-      "keywords": "keywords"
-    },
-    "header": {
-      "title": "Логотип1",
-      "phone": "8 917 954-77-80",
-      "email": "lindal@mail.ru",
-      "isGuest": true,
-      "lk": {
-        "username": "lindal",
-        "url": "#"
-      },
-      "basket": {
-        "addUrl": "#",
-        "deleteUrl": "#",
-        "changeUrl": "#",
-        "totalPrice": "12312",
-        "addUrl": "/basket/add",
-        "deleteUrl": "/basket/delete",
-        "updateUrl": "/basket/update",
-        "goods": [{
-          "goodID": "1",
-          "sizeID": "1",
-          "count": "2",
-          "totalPrice": "624",
-          "good": {
-            "id": "1",
-            "name": "Name",
-            "img": "url",
-            "url": "#",
-            "price": "312",
-            "seasonName": "Лето",
-            "genderName": "Мальчик"
-          },
-          "size": {
-            "id": "2",
-            "name": "size"
-          }
-        }, {
-          "goodID": "1",
-          "goodSizeID": "2",
-          "count": "2",
-          "totalPrice": "624",
-          "good": {
-            "id": "1",
-            "name": "Name",
-            "img": "url",
-            "url": "#",
-            "price": "312"
-          },
-          "size": {
-            "id": "2",
-            "name": "size"
-          }
-        }]
-      }
+    "head": "readyBlocksData.head_block",
+    "header": "readyBlocksData.header_block",
+    "forms": {
+      "searchForm": "readyBlocksData.searchForm_block",
+      "loginForm": "readyBlocksData.loginForm_block",
+      "regForm": "readyBlocksData.regForm_block",
+      "forgotForm": "readyBlocksData.forgotForm_block",
+      "filterForm": "readyBlocksData.filterForm_block"
     },
     "content": {
       "goodsCount": "132",
-      "filterForm": {
-        "action": "/",
-        "fields": {
-          "brands": [{
-            "value": "1",
-            "name": "brand[]",
-            "label": "Brand1",
-            "checked": true
-          }, {
-            "value": "2",
-            "name": "brand[]",
-            "label": "Brand2",
-            "checked": false
-          }],
-          "sizes": [{
-            "value": "1",
-            "name": "size[]",
-            "label": "Size1",
-            "checked": true
-          }, {
-            "value": "2",
-            "name": "size[]",
-            "label": "Size2",
-            "checked": false
-          }],
-          "seasons": [{
-            "value": "1",
-            "name": "seasons[]",
-            "label": "Лето",
-            "checked": true
-          }, {
-            "value": "2",
-            "name": "seasons[]",
-            "label": "Зима",
-            "checked": false
-          }, {
-            "value": "3",
-            "name": "seasons[]",
-            "label": "Весна-Осень",
-            "checked": false
-          }],
-          "genders": [{
-            "value": "1",
-            "label": "Мальчик",
-            "name": "genders[]",
-            "checked": true
-          }, {
-            "value": "2",
-            "label": "Девочка",
-            "name": "genders[]",
-            "checked": false
-          }, {
-            "value": "3",
-            "label": "Унисекс",
-            "name": "genders[]",
-            "checked": false
-          }]
-        }
-      },
-      "goods": [{
-        "id": "1",
-        "name": "Name",
-        "img": "url",
-        "url": "#",
-        "description": "description",
-        "price": "3213",
-        "brand": {
-          "id": "1",
-          "name": "brand1"
-        },
-        "seasonName": "Лето",
-        "genderName": "Мальчик",
-        "sizes": [{
-          "id": "1",
-          "name": "size1"
-        }, {
-          "id": "2",
-          "name": "size2"
-        }]
-      }]
+      "goods": [
+        "readyBlocksData.good_block"
+      ]
     }
   }
 }

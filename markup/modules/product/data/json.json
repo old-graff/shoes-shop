@@ -1,0 +1,23 @@
+{
+  "good_block": {
+    "id": "1",
+    "name": "Название товара",
+    "description": "Описание товара",
+    "url": "/inside-product/inside-product.html",
+    "img": "/static/img/content/test-img/boots.jpg",
+    "genderName": "Мальчик",
+    "seasonName": "Лето",
+    "price": "1500",
+    "brand": {
+      "id": "1",
+      "name": "Название бренда"
+    },
+    "sizes": [{
+      "id": "1",
+      "name": "21"
+    }, {
+      "id": "2",
+      "name": "22"
+    }]
+  }
+}

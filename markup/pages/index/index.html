@@ -7,7 +7,7 @@
 <html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="no-js" lang="ru"><!--<![endif]-->
-{{#with page_main}}
+{{#with index}}
 <head>
     {{> head/head head}}
 </head>
@@ -20,7 +20,7 @@
 
         <div block="content" mod="start" mix="block:container">
 
-            {{> start/start}}
+            {{> start/start this}}
 
         </div><!--content-->
 
@@ -31,7 +31,7 @@
 </section><!--page__wrapper-->
 
 <div elem="footer">
-    {{> footer/footer footer}}
+    {{> footer/footer }}
 </div><!--page__footer-->
 
 <script src="/static/js/main.js"></script>

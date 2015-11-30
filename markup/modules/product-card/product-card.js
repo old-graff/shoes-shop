@@ -4,12 +4,6 @@ app.controller('GoodsController', function ($scope, BasketService, $rootScope) {
             $rootScope.openPopup();
             return;
         }
-        $('.basket__wrapper').css({
-            right: 0
-        }).delay(1000)
-        .animate({
-            right: -230
-        });
         var row = {
             goodID: goodID,
             sizeID: sizeID,
@@ -24,21 +18,3 @@ app.controller('GoodsController', function ($scope, BasketService, $rootScope) {
         BasketService.add(row);
     };
 });
-//
-// $('html').on('click', '.product-card__size-list a', function () {
-//     var obj = {
-//         goodID: $(this).attr('data-good-id'),
-//         sizeID: $(this).attr('data-size-id'),
-//         good: {
-//             name: '',
-//             url: '',
-//             img: '',
-//             price: '312'
-//         },
-//         size: {
-//             name: '21'
-//         }
-//     };
-//     Basket.add(obj);
-//     return false;
-// });

@@ -1,0 +1,11 @@
+{
+  "forgotForm_block": {
+    "action": "#",
+    "method": "post",
+    "fields": {
+      "email": {
+        "name": "email"
+      }
+    }
+  }
+}

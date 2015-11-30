@@ -1,6 +1,6 @@
 <div block="product-card-micro" data-basket-id="{{id}}" ng-repeat="good in goods">
     <div elem="img-cont">
-        <img src="%=staticPrefix=%img/content/test-img/boots.jpg" alt="">
+        <img ng-src="{&#123;good.img}}" alt="">
     </div>
     <div elem="wrapper">
         <a href="{{good.url}}" elem="title" ng-bind="good.name">{{good.name}}</a>

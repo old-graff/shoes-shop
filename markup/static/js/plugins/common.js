@@ -73,9 +73,7 @@ app.run(function($rootScope){
   };
   $rootScope.showPopup = false;
   $rootScope.isGuest = false;
-  $rootScope.login = function () {
-    $rootScope.isGuest = false;
-  };
+  
 });
 
 app.config(function(localStorageServiceProvider) {

@@ -1,11 +1,11 @@
 <div block="login2" ng-hide="!checkState('login')">
     <i elem="close-ico" ng-click="closePopup()"></i>
 
-    <form action="#" method="post" elem="form">
+    <form action="{{action}}" method="{{method}}" elem="form">
         <p elem="title">Авторизация <a href="" ng-click="setState('reg')">Регистрация</a></p>
 
-        <label><span>Эл. почта</span><input type="email"></label>
-        <label><span>Пароль</span><input type="password"></label>
+        <label><span>Эл. почта</span><input type="email" name="{{fields.login.name}}"></label>
+        <label><span>Пароль</span><input type="password" name="{{fields.pass.name}}"></label>
 
         <p elem="forgot-pass"><a href="" ng-click="setState('forgot')">Забыл пароль</a></p>
 

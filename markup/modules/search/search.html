@@ -1,7 +1,11 @@
 <div block="search">
 
-    <form elem="form" action="#" method="post">
-        <p elem="input-cont"><input type="search" placeholder="Поиск по названию"><input type="submit" value=""></p>
-    </form>
+  <form action="{{action}}" elem="form" method="{{method}}">
+    <p elem="input-cont">
+      <input placeholder="Поиск по названию" type="search" name="{{fields.query.name}}">
+      <input type="submit" value="">
+    </p>
+  </form>
 
-</div><!--search-->
+</div>
+<!--search-->

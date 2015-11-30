@@ -6,7 +6,7 @@
     <div elem="hello">
         <h1 elem="title">Детская обувь мелким оптом без рядов в&nbsp;интернет-магазине «Марш»</h1>
         <div elem="img-cont">
-            <img src="%=staticPrefix=%img/content/test-img/romashki.jpg" alt="">
+            <img src="{{mainImg}}" alt="">
         </div>
 
         <div elem="hello-text-cont">
@@ -15,12 +15,12 @@
                 С нами удобно и надежно!
             </p>
         </div>
-        <a href="#" elem="start-button">Начать работу</a>
+        <a href="{{startUrl}}" elem="start-button">Начать работу</a>
     </div>
 
     <div elem="search">
         <p>Найдите нужный товар прямо сейчас!</p>
-        {{> search/search search}}
+        {{> search/search forms.searchForm}}
     </div>
 
     <ul elem="work-steps">

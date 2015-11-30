@@ -1,26 +1,31 @@
-<div block="size-table" ng-controller="GoodViewController">
+<div block="size-table" ng-controller="GoodViewController" >
 
-    <form elem="form" id="size-form">
-        <p elem="table-caption">Выберите&nbsp;размер и&nbsp;количество</p>
-
-        <div elem="table-limiter">
-            <table elem="size-table">
-                <tr>
-                    <td>Размеры</td>
-                    <td>Количество</td>
-                </tr>
-                {{#repeat 12}}
-                <tr>
-                    <td>{{@index}}</td>
-                    <td><p elem="number"><i>&#8249;</i><input type="text" size="2" maxlength="2" value="0"><i>
-                        &#8250;</i>
-                    </p></td>
-                </tr>
-                {{/repeat}}
-            </table>
-        </div>
+  <form elem="form" id="size-form">
+    <p elem="table-caption">Выберите&nbsp;размер и&nbsp;количество</p>
+{&#123;console.log(good)}}
+    <div elem="table-limiter">
+      <table elem="size-table">
+        <tr>
+          <td>Размеры</td>
+          <td>Количество</td>
+        </tr>
+        {{#each good.sizes}}
+          <tr>
+            <td>{{name}}</td>
+            <td>
+              <p elem="number">
+                <i>&#8249;</i>
+                <input maxlength="2" size="2" type="text" ng-model="sizes[{{id}}]">
+                <i>&#8250;</i>
+              </p>
+            </td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
 
     <input elem="submit" type="submit" value="Добавить в корзину">
   </form>
 
-</div><!--size-table-->
+</div>
+<!--size-table-->

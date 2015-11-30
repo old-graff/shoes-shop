@@ -1,0 +1,15 @@
+{
+  "header_block": {
+    "title": "Логотип1",
+    "phone": "8 917 954-77-80",
+    "email": "lindal@mail.ru",
+    "isGuest": false,
+    "user": {
+      "name": "lindal",
+      "userDataEditUrl": "#",
+      "logoutUrl": "#",
+      "ordersUrl": "#"
+    },
+    "createOrderUrl": "/inside-basket/inside-basket.html"
+  }
+}

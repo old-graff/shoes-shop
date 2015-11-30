@@ -2,8 +2,8 @@
     <i elem="close-ico" ng-click="closePopup()"></i>
 
     <p elem="title">Востановление пароля</p>
-    <form elem="form">
-        <label><span>Эл. почта</span><input type="email"></label>
+    <form elem="form" action="{{action}}" method="{{method}}">
+        <label><span>Эл. почта</span><input type="email" name="{{fields.email.name}}"></label>
         <p elem="submit-cont"><input type="submit" value="Востановить пароль"></p>
     </form>
 </div><!--forgot-pass-->

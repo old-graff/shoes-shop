@@ -1,21 +1,52 @@
 <div block="product">
 
-    <p elem="title">Ботинки Transformers повседневные кеды для мальчика 9999A</p>
+  <p elem="title">{{name}}</p>
 
-    <div elem="img-cont">
-        <img src="%=staticPrefix=%img/content/test-img/boots.jpg" alt="">
-    </div>
+  <div elem="img-cont">
+    <img alt="{{name}}" src="{{img}}">
+  </div>
 
-    <div elem="description">
-        <table elem="desc-table">
-            <tr><td>Название:</td><td>Ботинки Transformers повседневные кеды для мальчика 9999A</td></tr>
-            <tr><td><abbr title="Торговая марка">ТM</abbr>:</td><td>Kakadu Летающие звери</td></tr>
-            <tr><td>Размеры:</td><td>12, 13, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31</td></tr>
-            <tr><td>Пол:</td><td>Мальчик</td></tr>
-            <tr><td>Сезон:</td><td>Лето</td></tr>
-            <tr><td>Описание:</td><td>Просторное описание о качестве товара и его удивительных свойствах.</td></tr>
-            <tr elem="price"><td>Цена:</td><td><span>2400<b class="rub">a</b></span></td></tr>
-        </table>
-    </div>
+  <div elem="description">
+    <table elem="desc-table">
+      <tr>
+        <td>Название:</td>
+        <td>{{name}}</td>
+      </tr>
+      <tr>
+        <td>
+          <abbr title="Торговая марка">ТM</abbr>:</td>
+        <td>{{brand.name}}</td>
+      </tr>
+      <tr>
+        <td>Размеры:</td>
+        <td>
+          {{#each sizes}}
+          {{name}},
+          {{/each}}
+        </td>
+      </tr>
+      <tr>
+        <td>Пол:</td>
+        <td>{{genderName}}</td>
+      </tr>
+      <tr>
+        <td>Сезон:</td>
+        <td>{{seasonName}}</td>
+      </tr>
+      <tr>
+        <td>Описание:</td>
+        <td>{{desciption}}</td>
+      </tr>
+      <tr elem="price">
+        <td>Цена:</td>
+        <td>
+          <span>{{price}}
+            <b class="rub">a</b>
+          </span>
+        </td>
+      </tr>
+    </table>
+  </div>
 
-</div><!--product-->
+</div>
+<!--product-->
