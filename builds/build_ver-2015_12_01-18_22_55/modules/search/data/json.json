@@ -1,0 +1,11 @@
+{
+  "searchForm_block": {
+    "action": "#",
+    "method": "post",
+    "fields": {
+      "query": {
+        "name": "query"
+      }
+    }
+  }
+}

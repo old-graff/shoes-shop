@@ -1,34 +1,35 @@
 <div block="user-data-form">
-    <p elem="title">Личные данные</p>
+  <p elem="title">Личные данные</p>
+{{#with UserEditForm}}
+  <form action="{{action}}" elem="form" method="{{method}}">
+    <label>
+      <span>Имя:</span>
+      <input type="text" name="{{fields.name.name}}" value="{{fields.name.value}}">
+    </label>
+    <label>
+      <span>Эл. почта:</span>
+      <input type="email" name="{{fields.email.name}}" value="{{fields.email.value}}"></label>
+    <label>
+      <span>Телефон:</span>
+      <input type="tel"  name="{{fields.phone.name}}" value="{{fields.phone.value}}">
+    </label>
+    <label>
+      <span>Название компании:</span>
+      <input type="text" name="{{fields.company.name}}" value="{{fields.company.value}}">
+    </label>
 
-    <form elem="form" action="#" method="POST">
-        <label><span>Имя:</span>                <input type="text"></label>
-        <label><span>Эл. почта:</span>          <input type="email"></label>
-        <label><span>Телефон:</span>            <input type="tel"></label>
-        <label><span>Название компании:</span>  <input type="text"></label>
+    <fieldset>
+      <legend>Изменить пароль</legend>
 
-        <fieldset>
-            <legend>Адрес доставки</legend>
-
-            <label><span>Страна:</span>         <input type="text"></label>
-            <p>
-                <label><span>Регион:</span>     <input type="text"></label>
-                <label><span>Город:</span>      <input type="text"></label>
-            </p>
-            <p>
-                <label><span>Улица:</span>      <input type="text"></label>
-                <label><span>Дом:</span>        <input type="text"></label>
-                <label><span>Квартира:</span>   <input type="text"></label>
-            </p>
-            <label><span>Почтовый индекс:</span> <input type="text"></label>
-        </fieldset>
-
-        <fieldset>
-            <legend>Изменить пароль</legend>
-
-            <label><span>Старый пароль:</span>  <input type="password"></label>
-            <label><span>Новый пароль:</span>   <input type="password"></label>
-        </fieldset>
-        <input type="submit" elem="submit" value="Сохранить">
-    </form>
-</div><!--user-data-form-->
+      <label>
+        <span>Старый пароль:</span>
+        <input type="password" name="{{fields.oldPass.name}}"></label>
+      <label>
+        <span>Новый пароль:</span>
+        <input type="password" name="{{fields.newPass.name}}"></label>
+    </fieldset>
+    <input elem="submit" type="submit" value="Сохранить">
+  </form>
+  {{/with}}
+</div>
+<!--user-data-form-->

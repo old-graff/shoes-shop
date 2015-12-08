@@ -1,0 +1,70 @@
+{
+  "order": {
+    "head": {
+      "title": "title",
+      "description": "description",
+      "keywords": "keywords"
+    },
+    "header": {
+      "title": "Логотип1",
+      "phone": "8 917 954-77-80",
+      "email": "lindal@mail.ru",
+      "isGuest": false,
+      "user": {
+        "name": "lindal",
+        "userDataEditUrl": "#",
+        "logoutUrl": "#",
+        "ordersUrl": "#"
+      },
+      "createOrderUrl": "/inside-basket/inside-basket.html"
+    },
+    "forms": {
+      "searchForm": {
+        "action": "#",
+        "method": "post",
+        "fields": {
+          "query": {
+            "name": "query"
+          }
+        }
+      },
+      "loginForm": {
+        "action": "#",
+        "method": "post",
+        "fields": {
+          "login": {
+            "name": "login"
+          },
+          "pass": {
+            "name": "pass"
+          }
+        }
+      },
+      "regForm": {
+        "action": "#",
+        "method": "post",
+        "fields": {
+          "email": {
+            "name": "email"
+          },
+          "pass": {
+            "name": "pass"
+          },
+          "name": {
+            "name": "name"
+          }
+        }
+      },
+      "forgotForm": {
+        "action": "#",
+        "method": "post",
+        "fields": {
+          "email": {
+            "name": "email"
+          }
+        }
+      }
+    },
+    "orders": []
+  }
+}

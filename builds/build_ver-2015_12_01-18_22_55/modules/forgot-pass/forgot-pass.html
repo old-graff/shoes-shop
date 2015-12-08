@@ -1,0 +1,9 @@
+<div class="forgot-pass" ng-hide="!checkState('forgot')">
+    <i class="forgot-pass__close-ico" ng-click="closePopup()"></i>
+
+    <p class="forgot-pass__title">Востановление пароля</p>
+    <form class="forgot-pass__form" action="{{action}}" method="{{method}}">
+        <label><span>Эл. почта</span><input type="email" name="{{fields.email.name}}"></label>
+        <p class="forgot-pass__submit-cont"><input type="submit" value="Востановить пароль"></p>
+    </form>
+</div><!--forgot-pass-->

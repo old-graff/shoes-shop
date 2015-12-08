@@ -1,0 +1,11 @@
+<div class="registration" ng-hide="!checkState('reg')">
+    <i class="registration__close-ico" ng-click="closePopup()"></i>
+
+    <p class="registration__title">Регистрация <a href="" ng-click="setState('login')">Авторизация</a></p>
+    <form class="registration__form" action="{{action}}" method="{{method}}">
+        <label><span>Имя</span><input type="text" name="{{fields.name.name}}"></label>
+        <label><span>Эл. почта</span><input type="email" name="{{fields.email.name}}"></label>
+        <label><span>Пароль</span><input type="password" name="{{fields.pass.name}}"></label>
+        <p class="registration__submit-cont"><input type="submit" value="Зарегистрироваться"></p>
+    </form>
+</div><!--registration-->

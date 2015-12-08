@@ -5,15 +5,7 @@
       "useSocialMetaTags": true
     },
     "forms": {
-      "searchForm": {
-        "action": "/main/main.html",
-        "method": "post",
-        "fields": {
-          "query": {
-            "name": "query"
-          }
-        }
-      }
+      "searchForm": "readyBlocksData.searchForm_block"
     },
     "startUrl": "/main/main.html",
     "mainImg": "/static/img/content/test-img/romashki.jpg"

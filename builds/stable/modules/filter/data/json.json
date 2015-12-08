@@ -1,0 +1,61 @@
+{
+  "filterForm_block": {
+    "action": "#",
+    "fields": {
+      "brands": [{
+        "value": "1",
+        "name": "brand[]",
+        "label": "Brand1",
+        "checked": true
+      }, {
+        "value": "2",
+        "name": "brand[]",
+        "label": "Brand2",
+        "checked": false
+      }],
+      "sizes": [{
+        "value": "1",
+        "name": "size[]",
+        "label": "Size1",
+        "checked": true
+      }, {
+        "value": "2",
+        "name": "size[]",
+        "label": "Size2",
+        "checked": false
+      }],
+      "seasons": [{
+        "value": "1",
+        "name": "seasons[]",
+        "label": "Лето",
+        "checked": true
+      }, {
+        "value": "2",
+        "name": "seasons[]",
+        "label": "Зима",
+        "checked": false
+      }, {
+        "value": "3",
+        "name": "seasons[]",
+        "label": "Весна-Осень",
+        "checked": false
+      }],
+      "genders": [{
+        "value": "1",
+        "label": "Мальчик",
+        "name": "genders[]",
+        "checked": true
+      }, {
+        "value": "2",
+        "label": "Девочка",
+        "name": "genders[]",
+        "checked": false
+      }, {
+        "value": "3",
+        "label": "Унисекс",
+        "name": "genders[]",
+        "checked": false
+      }]
+    }
+  }
+}

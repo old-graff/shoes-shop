@@ -1,0 +1,31 @@
+{
+  "createOrderForm_block": {
+    "action": "#",
+    "method": "post",
+    "fields": {
+      "goods": {
+        "name": "goods[]"
+      },
+      "delivery": {
+        "name": "delivery",
+        "value": "1"
+      },
+      "name": {
+        "name": "name",
+        "value": "lindal"
+      },
+      "email": {
+        "name": "email",
+        "value": "lindal@mail.ru"
+      },
+      "phone": {
+        "name": "phone",
+        "value": "89608419006"
+      },
+      "comment": {
+        "name": "comment",
+        "value": "Comment"
+      }
+    }
+  }
+}

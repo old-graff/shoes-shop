@@ -17,8 +17,22 @@
     position: relative;
     left: -14px;
     top: -14px;
+    overflow: hidden;
+    background-color: #FFF;
+    //border: 1px solid blue;
     img {
       @include img-max-size($block-width, $block-width)
+    }
+  }
+  &__img-table {
+    display: table;
+    width: $block-width;
+    height: $block-width;
+    div {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      //border: 1px solid blue;
     }
   }
   &__strong {

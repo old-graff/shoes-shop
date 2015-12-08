@@ -1,0 +1,30 @@
+{
+  "UserEditForm_block": {
+    "action": "#",
+    "method": "post",
+    "fields": {
+      "name": {
+        "name": "name",
+        "value": "Lindal"
+      },
+      "email": {
+        "name": "email",
+        "value": "lindal@mail.ru"
+      },
+      "phone": {
+        "name": "phone",
+        "value": "454612315"
+      },
+      "company": {
+        "name": "company",
+        "value": "ООО компания"
+      },
+      "oldPass": {
+        "name": "oldPass"
+      },
+      "newPass": {
+        "name": "newPass"
+      }
+    }
+  }
+}

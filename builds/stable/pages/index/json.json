@@ -1,0 +1,21 @@
+{
+  "index": {
+    "head": {
+      "title": "Магазин обуви",
+      "useSocialMetaTags": true
+    },
+    "forms": {
+      "searchForm": {
+        "action": "#",
+        "method": "post",
+        "fields": {
+          "query": {
+            "name": "query"
+          }
+        }
+      }
+    },
+    "startUrl": "/main/main.html",
+    "mainImg": "/static/img/content/test-img/romashki.jpg"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "regForm_block": {
+    "action": "#",
+    "method": "post",
+    "fields": {
+      "email": {
+        "name": "email"
+      },
+      "pass": {
+        "name": "pass"
+      },
+      "name": {
+        "name": "name"
+      }
+    }
+  }
+}

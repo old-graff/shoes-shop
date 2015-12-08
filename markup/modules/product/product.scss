@@ -6,16 +6,17 @@
   }
   &__img-cont {
     width: 500px;
-    height: 500px;
+    //height: 500px;
     float: left;
     img {
-      @include img-max-size(500px, 500px)
+      @include img-max-size(500px, auto)
     }
   }
   &__description {
-    margin-left: 500px;
+    margin-left: 520px;
     background-color: $color-yellow-light;
     padding: 14px;
+    margin-bottom: 20px;
     display: block;
   }
   &__desc-table {
@@ -38,6 +39,25 @@
     font-size: 2rem;
     td {
       font-weight: normal !important;
+    }
+  }
+  &__imgs-cont {
+    margin-left: 520px;
+    //background-color: $color-yellow-light;
+    //padding: 14px;
+    //display: inline-block;
+    a {
+      display: inline-block;
+      //width: 100px;
+      height: 116px;
+      overflow: hidden;
+      margin-right: 10px;
+      padding: 8px;
+      background-color: $color-yellow-light;
+    }
+    img {
+      @include img-max-size(auto, 100px);
+      vertical-align: middle;
     }
   }
 }

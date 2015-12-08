@@ -1,0 +1,190 @@
+<!doctype html>
+<!--[if IE 7]>
+<html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+<!--[if IE 8]>
+<html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+<!--[if IE 9 ]>
+<html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="ru"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>title</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta name="robots" content="noodp, noydir">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
+    <meta name="HandheldFriendly" content="true">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <!--[if IE 8 ]><link href="/static/css/main_ie8.css" rel="stylesheet" type="text/css"><![endif]-->
+    <!--[if IE 9 ]><link href="/static/css/main_ie9.css" rel="stylesheet" type="text/css"><![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--><link href="/static/css/main.css" rel="stylesheet" type="text/css"><!--<![endif]-->
+    
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script>
+        (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+    </script>
+    <!--[if lt IE 9 ]><script src="/static/js/separate-js/html5shiv-3.7.2.min.js" type="text/javascript"></script><meta content="no" http-equiv="imagetoolbar"><![endif]-->
+    <script src="/static/js/separate-js/bootstrap.min" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+</head>
+
+<body class="page" ng-app="shoesPrj">
+
+<section class="page__wrapper">
+
+    <div class="page__header">
+        <div class="header">
+        
+          <div class="header__logo">
+            <p><a href="#">Марш</a></p>
+          </div>
+          <div class="header__search-cont">
+            <div class="search">
+            
+              <form class="search__form" action="" method="">
+                <p class="search__input-cont">
+                  <input placeholder="Поиск по названию" type="search" name="">
+                  <input type="submit" value="">
+                </p>
+              </form>
+            
+            </div>
+            <!--search-->
+          </div>
+        
+          <div class="header__contact-info">
+            <p class="header__phone"></p>
+            <a class="header__email" href="mailto:lindal@mail.ru"></a>
+          </div>
+        
+            <div class="header__user-name">
+              <div class="user-name">
+              
+                <ul class="user-name__menu">
+                  <li>
+                    <a class="user-name__user" href=""></a>
+                  </li>
+                  <li>
+                    <a class="user-name__order" href="">Заказы</a>
+                  </li>
+                  <li>
+                    <a class="user-name__logout" href="">Выйти</a>
+                  </li>
+                </ul>
+              
+              </div>
+              <!--user-name-->
+            </div>
+        
+          <div class="header__user-ui">
+            <div class="login" ng-show="isGuest" style="display: none">
+                <div class="login__invite">
+                    <a class="login__entry js-open-login-form" href="">Войти</a>
+                    <a class="login__registration" href="" ng-click="openPopup()">Зарегестрироваться</a>
+                </div>
+            
+                <form class="login__form" action="#" method="post">
+                    <label>
+                        <span>Логин</span>
+                        <input type="text" placeholder="Эл. почта">
+                    </label>
+                    <label>
+                        <span>Пароль</span>
+                        <input type="password" placeholder="Пароль">
+                    </label>
+                    <p class="login__forgot-pass"><a href="#">Забыл пароль</a></p>
+                    <input type="submit" value="Войти">
+                </form>
+            </div><!--login-->
+            <div class="basket" ng-controller="BasketController" ng-show="!isGuest" style="display: none">
+                <div class="basket__header">
+                    <p class="basket__price"><span>{&#123;getTotalPrice()}}</span><b class="rub">a</b></p>
+                    <p class="basket__count"></p>
+                </div><!--basket__header-->
+            
+                <div class="basket__wrapper">
+                    <div class="basket__content">
+                        <!-- <p elem="add-ok">Товар успешно добавлен в корзину!</p> -->
+                        <div class="product-card-micro" data-basket-id="" ng-repeat="good in goods">
+                            <div class="product-card-micro__img-cont">
+                                <img ng-src="{&#123;good.img}}" alt="">
+                            </div>
+                            <div class="product-card-micro__wrapper">
+                                <a class="product-card-micro__title" href="" ng-bind="good.name"></a>
+                                <table class="product-card-micro__info">
+                                    <tr>
+                                        <th>Размер</th>
+                                        <th>Кол-во</th>
+                                        <th>Цена</th>
+                                    </tr>
+                                    <tr>
+                                        <td ng-bind="good.sizeName"></td>
+                                        <td>
+                                            <span class="product-card-micro__number">
+                                                <i class="js-basket-count-minus" ng-click="decrement(good)">&#8249;</i>
+                                                <input class="js-basket-count-input" type="text" size="2" maxlength="2" ng-model="good.count" ng-change="updateCount(good)">
+                                                <i class="js-basket-count-plus" ng-click="increment(good)">&#8250;</i>
+                                            </span>
+                                        </td>
+                                        <td><span ng-bind="good.count * good.price"></span><b class="rub">a</b></td>
+                                    </tr>
+                                </table>
+                        
+                                <p style="display: none">
+                                    <span class="product-card-micro__number">
+                                      <i class="js-basket-count-minus" ng-click="decrement(good)">&#8249;</i>
+                                      <input class="js-basket-count-input" type="text" size="2" maxlength="2" ng-model="good.count" ng-change="updateCount(good)">
+                                      <i class="js-basket-count-plus" ng-click="increment(good)">&#8250;</i>
+                                    </span>
+                                    <span class="product-card-micro__size" ng-bind="good.sizeName"></span>
+                                    <span class="product-card-micro__price"><span ng-bind="good.count * good.price"></span><b class="rub">a</b></span>
+                                </p>
+                            </div>
+                            <a class="product-card-micro__ico-del js-basket-delete" href="" ng-click="delete(good.goodID, good.sizeID)"><i></i></a>
+                        </div><!--product-card-micro-->
+                    </div><!--basket__content-->
+                    <p class="basket__checkout"><a href="">Оформить заказ</a></p>
+                </div><!--wrapper__content-->
+            
+            </div><!--basket-->
+          </div>
+        
+        </div>
+        <!--header-->
+    </div><!--page__header-->
+
+    <div class="page__content">
+
+        <div class="content content_one-column container">
+
+            <div class="content__main-column">
+
+                <div class="user-data-form">
+                  <p class="user-data-form__title">Личные данные</p>
+                </div>
+                <!--user-data-form-->
+
+                <br class="content__clear">
+
+            </div><!--content__main-column-->
+
+        </div><!--content-->
+
+    </div><!--page__content-->
+
+    <div class="page__buffer"></div>
+
+</section><!--page__wrapper-->
+
+<div class="page__footer">
+    <div class="footer"></div></div><!--page__footer-->
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>

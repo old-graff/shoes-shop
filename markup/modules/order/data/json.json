@@ -1,0 +1,9 @@
+{
+  "order_block": {
+    "id": "1",
+    "buyer": {
+      "name": "lindal"
+    },
+    "deliveryType": "555"
+  }
+}
